@@ -50,7 +50,7 @@
 							<div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="150">
 								<h4 class="mt-2 mb-1">근무 시간</h4>
 								<ul class="list list-icons list-dark mt-2">
-									<li><i class="far fa-clock top-6"></i> 월 - 금 : 8am ~ </li>
+									<li><i class="far fa-clock top-6"></i> 월 - 금 : 8am ~ 5pm</li>
 									<li><i class="far fa-clock top-6"></i> 주말 : 휴무</li>
 								</ul>
 							</div>
@@ -77,7 +77,7 @@
 <?php include "include/script.php";?>
 
 		<!-- 다음지도 사용 -->
-		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=df5b9316780eedc5a86310a19dd6840b&libraries=services"></script>
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b2d3d5bba9dfb8777d3ac1fff27b7cc9&libraries=services"></script>
 		<script>
 		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
 		var options = { //지도를 생성할 때 필요한 기본 옵션
@@ -98,7 +98,7 @@
 		// 마커가 지도 위에 표시되도록 설정합니다
 		marker.setMap(map);
 
-		var iwContent = '<div style="padding:5px;">향우실업(주) <br><a href="https://map.kakao.com/link/map/향우실업(주),37.172120, 126.903323" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/향우실업(주),37.172120, 126.903323" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+		var iwContent = '<div style="padding:5px;">향우실업(주) <br><a href="https://map.kakao.com/link/map/향우실업(주),37.172120,126.903323" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/향우실업(주),37.172120, 126.903323" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
         iwPosition = new kakao.maps.LatLng(37.172120, 126.903323); //인포윈도우 표시 위치입니다
 
 		// 인포윈도우를 생성합니다
