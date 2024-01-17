@@ -22,11 +22,11 @@
 					<div class="row pt-4">
 						<div class="col-lg-12 mb-4">
 							<h2 class="word-rotator slide font-weight-bold text-8 mb-0 appear-animation" data-appear-animation="maskUp">
-									<span>보안문서 파쇄전문</span>
+									<span>문서파쇄 전문</span>
 							</h2>											
 							<div class="overflow-hidden">
  								<p>향우실업(주)는 대한민국 최고&#183;최대 안보단체 <span class="alternative-font"><a href="http://www.korva.or.kr" target="_blank">대한민국재향군인회</a></span>가 100% 출자하여 1978년에 설립한 회사입니다.<br>
-						        1970년대 정부로부터 폐지처리 대행기관으로 지정받아 오랜 시간 공공기관 폐문서처리를 담당해왔고, 40여년이라는 짧지않은 시간을 거쳐 보안문서파쇄 전문기업으로 국내 선두의 자리에 섰습니다.<br>
+						        1970년대 정부로부터 폐지처리 대행기관으로 지정받아 오랜 시간 공공기관 폐문서처리를 담당해왔고, 40여년이라는 짧지않은 시간을 거쳐 문서파쇄 전문기업으로 국내 선두의 자리에 섰습니다.<br>
 							    </p>
 							</div>
 						</div>

@@ -112,7 +112,7 @@
 						<div class="col-lg-4 appear-animation" data-appear-animation="fadeInRightShorter">
 							<h2 class="font-weight-normal text-6 line-heigh-2 mb-4"><strong class="font-weight-extra-bold">향우실업(주)</strong>는?</h2>
 							<p>향우실업(주)는 보훈기금 조성을 목적으로 설립하여 대한민국 최대&middot;최고의 안보단체인 재향군인회가 100% 주주인 기업입니다.</p>
-							<p>보안문서처리의 국내 선두주자로 자부하며, 제1금융권, 공공기관, 민간기업 등 1978년 설립 이래 다양한 거래처를  확보하고 있습니다.</p>
+							<p>문서파쇄 서비스의 국내 선두주자로 자부하며, 제1금융권, 공공기관, 민간기업 등 1978년 설립 이래 다양한 거래처를 확보하고 있습니다.</p>
 							<a href="about-us.php#" class="learn-more text-color-primary font-weight-semibold text-2">더 보기<i class="pl-2 fas fa-chevron-right text-2"></i></a>
 						</div>
 						<div class="col-lg-8 mt-5 mt-lg-0">

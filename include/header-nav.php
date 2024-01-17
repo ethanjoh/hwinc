@@ -34,10 +34,10 @@
 														</a>
 														<ul class="dropdown-menu">
 															<li>
-																<a class="dropdown-item" href="shred.php">보안문서파쇄 처리</a>
+																<a class="dropdown-item" href="shred.php">문서파쇄 서비스</a>
 															</li>
 															<li>
-																<a class="dropdown-item" href="recycle.php">폐케이블 처리</a>
+																<a class="dropdown-item" href="recycle.php">폐동케이블 재활용처리</a>
 															</li>
 <!-- 															<li>
 																<a class="dropdown-item" href="optical-recycle.php">폐광케이블 처리</a>
