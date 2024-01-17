@@ -1,0 +1,1398 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"nbs",
+				"nbsp;"
+			],
+			[
+				"col",
+				"col-lg-12"
+			],
+			[
+				"mb",
+				"mb-4"
+			],
+			[
+				"mt",
+				"mt-5"
+			],
+			[
+				"tex",
+				"text-carrot"
+			],
+			[
+				"text",
+				"text-carrot"
+			],
+			[
+				"buy",
+				"buyer_tel_3"
+			],
+			[
+				"buyer",
+				"buyer_tel_2"
+			],
+			[
+				"buyer_te",
+				"buyer_tel_1"
+			],
+			[
+				"com",
+				"company_name"
+			],
+			[
+				"bu",
+				"buyer_tel_1"
+			],
+			[
+				"Chec",
+				"Checkform"
+			],
+			[
+				"btn",
+				"btn-success"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"col-",
+				"col-md-6"
+			],
+			[
+				"table",
+				"table-bordered"
+			],
+			[
+				"sty",
+				"style"
+			],
+			[
+				"tx",
+				"text-center"
+			],
+			[
+				"col-l",
+				"col-lg-3"
+			],
+			[
+				"form",
+				"form-group"
+			],
+			[
+				"for",
+				"form-row"
+			],
+			[
+				"al",
+				"align-self-center\tabc"
+			],
+			[
+				"form-",
+				"form-control\t(product-control.php)"
+			],
+			[
+				"te",
+				"text\t(custom.js)"
+			],
+			[
+				"head",
+				"header〔function〕"
+			],
+			[
+				"num",
+				"number_format\tabc"
+			],
+			[
+				"width",
+				"width: 〔property〕"
+			],
+			[
+				"produc",
+				"products_opt"
+			],
+			[
+				"fina",
+				"final_opt_stock"
+			],
+			[
+				"array",
+				"array"
+			],
+			[
+				"pro",
+				"products_opt"
+			],
+			[
+				"opt",
+				"optstock"
+			],
+			[
+				"prod",
+				"products_opt_count"
+			],
+			[
+				"q",
+				"qry_char"
+			],
+			[
+				"prud",
+				"products_num"
+			],
+			[
+				"font-",
+				"font-weight\tproperty"
+			],
+			[
+				"strip",
+				"stripslashes"
+			],
+			[
+				"qu",
+				"quoteType"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"para",
+				"params2"
+			],
+			[
+				"sales",
+				"sales_data"
+			],
+			[
+				"this",
+				"this_month"
+			],
+			[
+				"ali",
+				"text-align"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"cre",
+				"create_date"
+			],
+			[
+				"sc",
+				"scrollbars"
+			],
+			[
+				"uri",
+				"uri_d"
+			],
+			[
+				"sho",
+				"short_desc"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"a",
+				"active"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"import",
+				"important"
+			],
+			[
+				"border-top",
+				"border-top-style"
+			],
+			[
+				"top",
+				"border-top-color"
+			],
+			[
+				"intval",
+				"intval"
+			],
+			[
+				"bbs",
+				"bbs_name"
+			],
+			[
+				"post",
+				"post_date"
+			],
+			[
+				"strto",
+				"strtotime"
+			],
+			[
+				"cate",
+				"category2"
+			],
+			[
+				"categ",
+				"category1"
+			],
+			[
+				"comp",
+				"company_name"
+			],
+			[
+				"ava",
+				"available"
+			],
+			[
+				"exp",
+				"explode"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"tax",
+				"tax_type"
+			],
+			[
+				"admin",
+				"admin_id"
+			],
+			[
+				"set",
+				"set_var"
+			],
+			[
+				"ta",
+				"target\tAttr"
+			],
+			[
+				"res_1",
+				"res_10"
+			],
+			[
+				"row",
+				"row_10"
+			],
+			[
+				"sql_",
+				"sql_10"
+			],
+			[
+				"on",
+				"onclick\tAttr"
+			],
+			[
+				"da",
+				"date2"
+			],
+			[
+				"mi",
+				"min-height"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"l_",
+				"l_row"
+			],
+			[
+				"btn-",
+				"btn-xs"
+			],
+			[
+				"size",
+				"font-size"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"re",
+				"replace"
+			],
+			[
+				"lo",
+				"location"
+			],
+			[
+				"date",
+				"dateFormat"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"bo",
+				"border-bottom"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"key",
+				"key_value"
+			],
+			[
+				"mysqli_fe",
+				"mysqli_fetch_array"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"lef",
+				"left_banner"
+			],
+			[
+				"offe",
+				"offset"
+			],
+			[
+				"check",
+				"checked"
+			],
+			[
+				"show",
+				"show_msg"
+			],
+			[
+				"s",
+				"style\tAttr"
+			],
+			[
+				"sum",
+				"sumNum"
+			],
+			[
+				"tota",
+				"totalSum"
+			],
+			[
+				"compa",
+				"company"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"hea",
+				"header"
+			],
+			[
+				"thumb",
+				"thumb_dir"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 588.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pain",
+				"Package Control: Install Package"
+			],
+			[
+				"pare",
+				"Package Control: Remove Package"
+			],
+			[
+				"packre",
+				"Package Control: Remove Channel"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"php",
+				"phpfmt: format now"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Install Package Control"
+			],
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
+			[
+				"jscs",
+				"JSCS Formatter: Format this file"
+			],
+			[
+				"pc",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"gd",
+				"Goto Documentation"
+			],
+			[
+				"goto d",
+				"Goto Documentation"
+			],
+			[
+				"pa con in",
+				"Package Control: Install Package"
+			],
+			[
+				"pack con",
+				"Package Control: Install Package"
+			],
+			[
+				"pa con",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"pa con li",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 768.0
+	},
+	"console":
+	{
+		"height": 422.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/업무 백업/Homepage",
+		"/D/업무 백업/Homepage/img"
+	],
+	"file_history":
+	[
+		"/D/업무 백업/Homepage/admin/draw-map.php",
+		"/D/업무 백업/Homepage/admin/css/custom.css",
+		"/D/업무 백업/Homepage/util/config.php",
+		"/D/업무 백업/Homepage/css/custom.css",
+		"/D/업무 백업/Homepage/recycle.php",
+		"/D/업무 백업/Homepage/optical-recycle.php",
+		"/?RaiDrive-JOH/NAS업무백업/Drive/개인백업/www/imclip/redirect.txt",
+		"/D/업무 백업/Homepage/index.php",
+		"/D/업무 백업/Homepage/clients.php",
+		"/D/업무 백업/Homepage/include/carousel.php",
+		"/D/업무 백업/Homepage/include/footer.php",
+		"/D/업무 백업/Homepage/price.php",
+		"/D/업무 백업/Homepage/include/header-nav.php",
+		"/D/업무 백업/Homepage/include/header.php",
+		"/D/업무 백업/Homepage/about-us.php",
+		"/D/업무 백업/Homepage/include/header-top.php",
+		"/D/업무 백업/Homepage/facility.php",
+		"/Z/home/Drive/업무백업/Homepage/facility.php",
+		"/Z/home/Drive/업무백업/Homepage/price.php",
+		"/Z/home/Drive/업무백업/Homepage/prohibit-email-collection.php",
+		"/Z/home/Drive/업무백업/Homepage/include/footer.php",
+		"/Z/home/Drive/업무백업/Homepage/include/header.php",
+		"/Z/home/Drive/업무백업/Homepage/enter-payment.php",
+		"/Z/home/Drive/업무백업/Homepage/include/verify-payment.php",
+		"/Z/home/Drive/업무백업/Homepage/payment.php",
+		"/Z/home/Drive/업무백업/Homepage/include/footer (1).php",
+		"/Z/home/Drive/업무백업/Homepage/include/script.php",
+		"/Z/home/Drive/업무백업/Homepage/js/theme.init.js",
+		"/Z/home/Drive/업무백업/Homepage/js/theme.js",
+		"/Z/home/Drive/업무백업/Homepage/admin/js/custom.js",
+		"/Z/home/Drive/업무백업/Homepage/js/custom.js",
+		"/Z/home/Drive/업무백업/Homepage/admin/main.php",
+		"/Z/home/Drive/업무백업/Homepage/admin/include/navigation.php",
+		"/Z/home/Drive/업무백업/Homepage/admin/css/custom.css",
+		"/Z/home/Drive/업무백업/Homepage/admin/draw-map.php",
+		"/Z/home/Drive/업무백업/Homepage/admin/css/sb-admin-2.css",
+		"/Z/home/Drive/개인백업/www/shinsoo/test/get-product.php",
+		"/Z/home/Drive/업무백업/Homepage/admin/billing-list.php",
+		"/Z/home/Drive/업무백업/Homepage/admin/save-billing.php",
+		"/Z/home/Drive/업무백업/Homepage/admin/upload-map.php",
+		"/Z/home/Drive/업무백업/Homepage/admin/billing.php",
+		"/Z/home/Drive/개인백업/www/shinsoo/util/util.php",
+		"/Z/home/Drive/업무백업/Homepage/admin/map-upload-ok.php",
+		"/Z/home/Drive/업무백업/Homepage/map/multi-map.php",
+		"/Z/home/Drive/업무백업/Homepage/util/functions.php",
+		"/Z/home/Drive/업무백업/Homepage/admin/include/footer.php",
+		"/C/xampp/htdocs/multi-map.php",
+		"/Z/home/Drive/업무백업/Homepage/util/config.php",
+		"/D/업무 백업/Homepage/privacy.php",
+		"/D/업무 백업/Homepage/enter-payment.php",
+		"/D/업무 백업/Homepage/history.php",
+		"/D/업무 백업/Homepage/admin/del-pay.php",
+		"/D/업무 백업/Homepage/admin/billing-list.php",
+		"/F/구글 백업/Homepage/admin/del-member.php",
+		"/F/구글 백업/Homepage/include/script.php",
+		"/F/구글 백업/Homepage/include/header-nav.php",
+		"/F/구글 백업/Homepage/include/footer.php",
+		"/F/구글 백업/Homepage/price.php",
+		"/F/구글 백업/Homepage/sitemap.xml",
+		"/F/구글 백업/Homepage/history.php",
+		"/C/Users/ethan/Google Drive(osakabiz2010@gmail.com)/Homepage/privacy.php",
+		"/C/Users/ethan/Google Drive(osakabiz2010@gmail.com)/Homepage/download-pdf.php",
+		"/D/구글/Homepage/optical-recycle.php",
+		"/C/Users/ethan/Downloads/개인정보+처리방침.html",
+		"/D/구글/Homepage/include/header-nav.php",
+		"/D/구글/Homepage/index.php",
+		"/D/구글/Homepage/enter-payment.php",
+		"/D/구글/Homepage/download-pdf.php",
+		"/D/구글/Homepage/recycle.php",
+		"/D/구글/Homepage/shred.php",
+		"/D/구글/Homepage/facility.php",
+		"/D/구글/Homepage/include/footer.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/admin/main.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/enter-payment.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/admin/include/navigation.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/callback.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/payment.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/include/verify-payment.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/admin/billing-list.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/admin/index.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/admin/login.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/util/config.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/util/functions.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/verify-payment.php",
+		"/C/Users/ethan/Google 드라이브/문서양식/themeforest-MVUeyZ0v-porto-responsive-html5-template/HTML/elements-cards.html",
+		"/C/Users/ethan/Google 드라이브/Homepage/admin/js/custom.js",
+		"/C/Users/ethan/Google 드라이브/Homepage/admin/save-billing.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/admin/billing.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/admin/include/footer.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/admin/include/header.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/js/custom.js",
+		"/C/Users/ethan/Google 드라이브/Homepage/admin/request-pay.php",
+		"/C/Users/ethan/Google 드라이브/문서양식/startbootstrap-sb-admin-2-gh-pages/index.html",
+		"/C/Users/ethan/Google 드라이브/Homepage/include/header-nav.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/include/header.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/include/script.php",
+		"/C/Users/ethan/Downloads/iamport-rest-client-php-master/example/example_list_by_merchant_uid.php",
+		"/C/Users/ethan/Downloads/iamport-rest-client-php-master/example/example_sbcr_customers_POST.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/js/payment.js",
+		"/C/Users/ethan/Google 드라이브/Homepage/price.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/vendor/jquery/jquery.js",
+		"/C/Users/ethan/Google 드라이브/Homepage/js/theme.js",
+		"/C/Users/ethan/Google 드라이브/Homepage/js/theme.init.js",
+		"/C/Users/ethan/Google 드라이브/Homepage/price_old(not use).php",
+		"/C/Users/ethan/Downloads/Subtitle 1.srt",
+		"/C/Users/ethan/Google 드라이브/Homepage/sitemap.xml",
+		"/C/Users/ethan/Google 드라이브/Homepage/faq.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/img/home/security1-3.jpg",
+		"/C/Users/ethan/Google 드라이브/Homepage/include/footer.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/index.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/about-us.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/privacy.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/css/custom.css",
+		"/C/Users/ethan/Google 드라이브/Homepage/css/skin.css",
+		"/C/Users/ethan/Google 드라이브/Homepage/inquiry.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/php/contact-form.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/history.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/include/header-top.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/map/bank.html",
+		"/C/Users/ethan/Google 드라이브/Homepage/shred.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/facility.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/php/php-mailer/src/PHPMailer.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/vendor/jquery.validation/jquery.validate.js",
+		"/C/Users/ethan/Google 드라이브/Homepage/js/views/view.contact.js",
+		"/C/Users/ethan/Google 드라이브/문서양식/themeforest-MVUeyZ0v-porto-responsive-html5-template/HTML/php/contact-form.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/php/contact-form-recaptcha-v3.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/php/contact-form-recaptcha-v2.php",
+		"/C/Users/ethan/Google 드라이브/Homepage/map/wooribank.html"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 619.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"tempXLX",
+			"xlxFilePath",
+			"copy_detail_img",
+			"WriteAddress",
+			"recycle",
+			"_POST",
+			"stripslashes",
+			"weight",
+			"buyer_tel_3",
+			"admin_pw1",
+			"company_value",
+			"pname",
+			"sdate",
+			"company_name",
+			"buyer_tel_1",
+			"buyer_name",
+			"md",
+			"col-md-4",
+			"<div class=\"form-group col-md-3\">",
+			"square",
+			"_xcLqmC",
+			"35.21545439021466, 128.6728459436356",
+			"35.15934561836447, 128.98371451480537",
+			"35.105966, 129.036500",
+			"35.178785151146045, 129.12318645805374",
+			"35.22476856247672, 128.68422166921587",
+			"35.22031249934888, 128.67633708734692",
+			"35.20282657485023, 129.08577600771466",
+			"36.12886586852759, 128.18884797412957",
+			"Please fill this empty field.",
+			"    \t}",
+			"$email",
+			"Email",
+			"email",
+			"Could not instantiate mail function",
+			"Subject",
+			"phone",
+			"mail",
+			"isset(",
+			"#",
+			"37.8909131,127.05395279999993",
+			"37.6552403,126.68703400000004",
+			"37.3621399,126.93289809999999",
+			"37.6105442,127.17012279999994",
+			"37.4227551,127.25916510000002",
+			"37.46975,126.84823900000004",
+			"37.6618698,126.77250989999993",
+			"37.8294289,127.50818800000002",
+			"*",
+			"tertiary",
+			"<i class=\"icon-info icons\"></i>",
+			"Sign Up",
+			"PER MONTH",
+			"$"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": true,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 209.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SFTP":
+	{
+		"height": 213.0
+	},
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 198.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 112.0
+	},
+	"pinned_build_system": "",
+	"project": "hyangwooinc.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"custom",
+				"admin\\css\\custom.css"
+			],
+			[
+				"d",
+				"admin\\draw-map.php"
+			],
+			[
+				"pri",
+				"price.php"
+			],
+			[
+				"",
+				"include\\header.php"
+			],
+			[
+				"faci",
+				"facility.php"
+			],
+			[
+				"foo",
+				"include\\footer.php"
+			],
+			[
+				"e",
+				"enter-payment.php"
+			],
+			[
+				"enter",
+				"enter-payment.php"
+			],
+			[
+				"hea",
+				"include\\header.php"
+			],
+			[
+				"nav",
+				"admin\\include\\navigation.php"
+			],
+			[
+				"main",
+				"admin\\main.php"
+			],
+			[
+				"navi",
+				"admin\\include\\navigation.php"
+			],
+			[
+				"fun",
+				"util\\functions.php"
+			],
+			[
+				"custo",
+				"admin\\css\\custom.css"
+			],
+			[
+				"price",
+				"price.php"
+			],
+			[
+				"scrip",
+				"include\\script.php"
+			],
+			[
+				"head",
+				"include\\header-nav.php"
+			],
+			[
+				"foot",
+				"include\\footer.php"
+			],
+			[
+				"histor",
+				"history.php"
+			],
+			[
+				"pirce",
+				"price.php"
+			],
+			[
+				"opti",
+				"optical-recycle.php"
+			],
+			[
+				"inde",
+				"index.php"
+			],
+			[
+				"recy",
+				"recycle.php"
+			],
+			[
+				"p",
+				"payment.php"
+			],
+			[
+				"pr",
+				"price.php"
+			],
+			[
+				"about",
+				"about-us.php"
+			],
+			[
+				"faq",
+				"faq.php"
+			],
+			[
+				"his",
+				"history.php"
+			],
+			[
+				"shre",
+				"shred.php"
+			],
+			[
+				"abou",
+				"about-us.php"
+			],
+			[
+				"conta",
+				"php\\contact-form.php"
+			],
+			[
+				"ski",
+				"css\\skin.css"
+			],
+			[
+				"thme",
+				"css\\theme-elements.css"
+			],
+			[
+				"fac",
+				"facility.php"
+			],
+			[
+				"HIS",
+				"history.php"
+			],
+			[
+				"vehi",
+				"vehicle.php"
+			],
+			[
+				"hi",
+				"css\\hierarchy-view.css"
+			],
+			[
+				"orga",
+				"css\\organization.css"
+			],
+			[
+				"ind",
+				"index.php"
+			],
+			[
+				"cus",
+				"admin\\css\\custom.css"
+			],
+			[
+				"sett",
+				"admin\\setting.php"
+			],
+			[
+				"confi",
+				"util\\config.php"
+			],
+			[
+				"lo",
+				"login-ok.php"
+			],
+			[
+				"l",
+				"login.php"
+			],
+			[
+				"pay",
+				"pay.php"
+			],
+			[
+				"ini",
+				"init-ok.php"
+			],
+			[
+				"log",
+				"login.php"
+			],
+			[
+				"config",
+				"util\\config.php"
+			],
+			[
+				"uti",
+				"util\\util.php"
+			],
+			[
+				"or",
+				"organization.php"
+			],
+			[
+				"he",
+				"include\\header.php"
+			],
+			[
+				"the",
+				"css\\theme.css"
+			],
+			[
+				"th",
+				"css\\theme.css"
+			],
+			[
+				"theme",
+				"css\\theme-elements.css"
+			],
+			[
+				"footer",
+				"include\\footer.php"
+			],
+			[
+				"them",
+				"css\\theme-elements.css"
+			],
+			[
+				"org",
+				"organization.php"
+			],
+			[
+				"cer",
+				"certificate.php"
+			],
+			[
+				"cont",
+				"contact-us.php"
+			],
+			[
+				"con",
+				"contact-us.php"
+			],
+			[
+				"cet",
+				"certificate.php"
+			],
+			[
+				"ve",
+				"vehicle.php"
+			],
+			[
+				"cli",
+				"clients.php"
+			],
+			[
+				"abo",
+				"about-us.php"
+			],
+			[
+				"scr",
+				"include\\script.php"
+			],
+			[
+				"gall",
+				"gallery.php"
+			],
+			[
+				"clien",
+				"clients.php"
+			],
+			[
+				"addc",
+				"js\\addcart.js"
+			],
+			[
+				"util",
+				"util\\util.php"
+			],
+			[
+				"db",
+				"db.php"
+			],
+			[
+				"va",
+				"pay\\variables_from_payreq.php"
+			],
+			[
+				"cart",
+				"shop\\cart-update.php"
+			],
+			[
+				"add",
+				"js\\addcart.js"
+			],
+			[
+				"cata",
+				"shop\\catalog-list.php"
+			],
+			[
+				"detail",
+				"shop\\detail.php"
+			],
+			[
+				"index",
+				"web\\index.html"
+			],
+			[
+				"upda",
+				"update.php"
+			],
+			[
+				"up",
+				"update.php"
+			],
+			[
+				"login",
+				"member\\login-ok.php"
+			],
+			[
+				"che",
+				"shop\\checkout.php"
+			],
+			[
+				"payre",
+				"pay\\payres.php"
+			],
+			[
+				"retur",
+				"pay\\returnurl.php"
+			],
+			[
+				"var",
+				"pay\\variables_from_payreq.php"
+			],
+			[
+				"vari",
+				"pay\\variables_from_payreq.php"
+			],
+			[
+				"cas",
+				"pay\\cas_noteurl.php"
+			],
+			[
+				"edit",
+				"admin\\order\\edit_pro.php"
+			],
+			[
+				"pro_re",
+				"admin\\products\\pro_register.php"
+			],
+			[
+				"catalo",
+				"shop\\catalog-list.php"
+			],
+			[
+				"ge",
+				"get-product.php"
+			],
+			[
+				"way",
+				"admin\\order\\upload_waybill_process.php"
+			],
+			[
+				"down",
+				"admin\\products\\down_pro_excel.php"
+			],
+			[
+				"expo",
+				"admin\\products\\export-excel.php"
+			],
+			[
+				"admin",
+				"util\\admin_auth.php"
+			],
+			[
+				"exp",
+				"admin\\products\\export-excel.php"
+			],
+			[
+				"tra",
+				"admin\\order\\tracktoexcel_a.php"
+			],
+			[
+				"top",
+				"admin\\products\\top_pro_list.php"
+			],
+			[
+				"upload",
+				"admin\\order\\upload_waybill_process.php"
+			],
+			[
+				"upload_",
+				"admin\\order\\upload_waybill.php"
+			],
+			[
+				"arra",
+				"shop\\array.php"
+			],
+			[
+				"arr",
+				"shop\\array.php"
+			],
+			[
+				"styl",
+				"css\\style.css"
+			],
+			[
+				"order",
+				"shop\\order-delete.php"
+			],
+			[
+				"checkou",
+				"shop\\(not use)checkout-ok.php"
+			],
+			[
+				"or_de",
+				"admin\\order\\or_delete.php"
+			],
+			[
+				"top_or",
+				"admin\\order\\top_order_list.php"
+			],
+			[
+				"top_pro",
+				"admin\\products\\top_pro_list.php"
+			],
+			[
+				"payreq",
+				"smartpay\\payreq_crossplatform.php"
+			],
+			[
+				"shop",
+				"js\\shopping.js"
+			],
+			[
+				"sho",
+				"js\\shopping.js"
+			],
+			[
+				"mem_ins",
+				"admin\\member\\mem_ins_member.php"
+			],
+			[
+				"regis",
+				"member\\register-ok.php"
+			],
+			[
+				"read",
+				"bbs\\read.php"
+			],
+			[
+				"pos",
+				"bbs\\post_ok.php"
+			],
+			[
+				"post",
+				"bbs\\post.php"
+			],
+			[
+				"add_mem",
+				"admin\\order\\add_memo.php"
+			],
+			[
+				"deliv",
+				"admin\\setting\\delivery_setup.php"
+			],
+			[
+				"mem_vi",
+				"admin\\member\\mem_view_member.php"
+			],
+			[
+				"my",
+				"css\\myshop.css"
+			],
+			[
+				"rul",
+				"member\\inc\\rule.html"
+			],
+			[
+				"priva",
+				"member\\privacy-policy.php"
+			],
+			[
+				"ly",
+				"css\\layout.css"
+			],
+			[
+				"style",
+				"css\\style.css"
+			],
+			[
+				"header",
+				"include\\header.php"
+			],
+			[
+				"s",
+				"css\\style.css"
+			],
+			[
+				"produc",
+				"admin/member/product_list.php"
+			],
+			[
+				"sale",
+				"admin/order/sale_test.php"
+			],
+			[
+				"track",
+				"admin/order/track_a_list.php"
+			],
+			[
+				"or_chan",
+				"admin/order/or_changed.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Desktop/git_project/linktrading-co-kr/linktrading.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 110.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 378.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 351.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

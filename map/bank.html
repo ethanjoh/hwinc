@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>우리은행 수거배치도</title>
+
+</head>
+<body>
+	<div align="center"><h2>우리은행 수거배치도</h2></div>
+<div id="map" style="width:100%;height:900px;"></div>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1d82399ef6b0c1a6b59a9d03f7967155"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+    mapOption = {
+        center: new daum.maps.LatLng(35.15691960842055, 129.0594686804946), // 지도의 중심좌표
+        level: 8 // 지도의 확대 레벨
+    };
+
+var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+
+// 마커를 표시할 위치와 title 객체 배열입니다
+var positions = [
+    {
+        title: '부산서면지점',
+        latlng: new daum.maps.LatLng(35.15691960842055, 129.0594686804946),
+        iwPos: new daum.maps.LatLng(35.15691960842055, 129.0594686804946)
+    },
+    {
+        title: '부평동지점',
+        latlng: new daum.maps.LatLng(35.10175887650635, 129.02484436310115),
+        iwPos: new daum.maps.LatLng(35.10175887650635, 129.02484436310115)
+    },
+    {
+        title: '메트로시티점',
+        latlng: new daum.maps.LatLng(35.126223470671086, 129.10965505313334),
+        iwPos: new daum.maps.LatLng(35.126223470671086, 129.10965505313334)
+    },
+    {
+        title: '수영역금융센터',
+        latlng: new daum.maps.LatLng(35.167431219748515, 129.1145033067024),
+        iwPos: new daum.maps.LatLng(35.167431219748515, 129.1145033067024)
+    },
+    {
+        title: '망미동지점',
+        latlng: new daum.maps.LatLng(35.17339389944537, 129.1171864759622),
+        iwPos: new daum.maps.LatLng(35.17339389944537, 129.1171864759622)
+    },
+    {
+        title: '온천동금융센터',
+        latlng: new daum.maps.LatLng(35.218898321134084, 129.082944054078),
+        iwPos: new daum.maps.LatLng(35.218898321134084, 129.082944054078)
+    },
+    {
+        title: '김해금융센터',
+        latlng: new daum.maps.LatLng(35.23558606360735, 128.86723104144806),
+        iwPos: new daum.maps.LatLng(35.23558606360735, 128.86723104144806)
+    },
+    {
+        title: '창원공단금융센터',
+        latlng: new daum.maps.LatLng(35.215345924531256, 128.6728459436356),
+        iwPos: new daum.maps.LatLng(35.215345924531256, 128.6728459436356)
+    }
+];
+
+
+for (var i = 0; i < positions.length; i ++) {
+
+    // 마커를 생성합니다
+    var marker = new daum.maps.Marker({
+        map: map, // 마커를 표시할 지도
+        position: positions[i].latlng, // 마커를 표시할 위치
+    });
+
+	var infowindow = new daum.maps.InfoWindow({
+    	position : positions[i].iwPos, // 인포윈도우를 표시할 위치
+        content : positions[i].title, // 인포윈도우 타이틀
+    });
+
+    infowindow.open(map, marker);
+}
+</script>
+</body>
+</html>
