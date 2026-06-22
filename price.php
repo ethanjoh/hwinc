@@ -47,7 +47,8 @@
 										<footer>
 											<i class="fas fa-info-circle"></i> 현장파쇄가 아닌 입고파쇄비용입니다.<br>
 											<i class="fas fa-info-circle"></i> 500kg 초과 시 기본 파쇄비용 외 중량별 파쇄비용을 합산하여 청구하게 됩니다.<br>
-											<i class="fas fa-info-circle"></i> 대량 또는 정기적으로 파쇄하시는 경우에는 별도 문의바랍니다.
+											<i class="fas fa-info-circle"></i> 대량 또는 정기적으로 파쇄하시는 경우에는 별도 문의바랍니다.<br>
+											<i class="fas fa-check-circle"></i> 사전협의 후 직접입고 시 무상파쇄 가능
 										</footer>
 									</blockquote>
 								</div>
@@ -93,13 +94,13 @@
 							<hr class="solid my-5">
 							<h3 class="text-carrot"><strong>공통사항(주의사항)</strong></h3>
 							<p>
-								<i class="fas fa-check-circle"></i> 재활용 가능한 종이(A4용지 등) 기준이며, 색지, 플라스틱 바인더, 스프링철, 비닐 등 폐기물은 분리 후 별도폐기하셔야 합니다.<br>
-								<i class="fas fa-check-circle"></i> 사무실용 세절기(파쇄기)로 파쇄한 폐지는 종량제봉투로 버리시면 됩니다. (재활용안됨) <br>
-								<i class="fas fa-check-circle"></i> 기사 1명, 사원 2명 기준입니다. <br>
-							  <i class="fas fa-check-circle"></i> 2층 이상인 경우 엘리베이터 사용 가능해야 하며, 사다리차 이용 시 실비청구.<br>
-							  <i class="fas fa-check-circle"></i> 탑차가 들어갈 수 없는 지하층일 경우 추가 비용발생.<br>
-							  <i class="fas fa-check-circle"></i> 작업동선이 길거나 열악한 경우 인원 추가에 따른 비용 증가할 수 있습니다.<br>
-							  <i class="fas fa-check-circle"></i> 수거가 용이하도록 박스나 마대 등에 담아두셔야 합니다.<br>
+								<i class="fas fa-check-circle"></i> 재활용 가능한 종이(A4용지 등) 기준이며, 색지, 플라스틱 바인더, 스프링철, 비닐 등 폐기물은 분리 후 별도폐기하셔야 합니다<br>
+								<i class="fas fa-check-circle"></i> 사무실용 세절기(파쇄기)로 파쇄한 폐지는 종량제봉투로 버리시면 됩니다(재활용안됨) <br>
+								<i class="fas fa-check-circle"></i> 기사 1명, 사원 2명 기준입니다<br>
+							  <i class="fas fa-check-circle"></i> 2층 이상인 경우 엘리베이터 사용 가능해야 하며, 사다리차 이용 시 실비청구<br>
+							  <i class="fas fa-check-circle"></i> 탑차가 들어갈 수 없는 지하층일 경우 추가 비용발생(1톤 화물차)<br>
+							  <i class="fas fa-check-circle"></i> 작업동선이 길거나 별도로 포장해야하는 경우 등 인원 추가에 따른 비용 증가할 수 있습니다<br>
+							  <i class="fas fa-check-circle"></i> 수거가 용이하도록 박스나 마대 등에 담아두셔야 합니다<br>
 						  </p>
 						</div>
 					</div>
