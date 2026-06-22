@@ -117,8 +117,8 @@
 						<!-- 현장파쇄 -->
 						<div class="col-lg-12">
 							<div class="heading heading-border heading-bottom-border mt-5">
-	              <h4 class="text-tertiary">현장파쇄</h4>
-	              <p class="mb-3">파쇄차량이 고객이 요청한 장소에서 즉시 파쇄하는 방법입니다. (※ 최근에는 분진, 소음 등 민원발생으로 입고파쇄를 추천합니다) </p>
+	              <h4 class="text-tertiary">현장파쇄 (운영중단)</h4>
+	              <p class="mb-3">파쇄차량이 고객이 요청한 장소에서 즉시 파쇄하는 방법입니다. (※ 최근에는 분진, 소음 등 민원발생으로 현장파쇄를 중단하였으며 입고파쇄를 추천합니다) </p>
 	          	</div>
 							<div class="row py-3 justify-content-center">
 								<div class="col-sm-8 col-md-4 mb-4 mb-md-0 appear-animation" data-appear-animation="fadeIn">

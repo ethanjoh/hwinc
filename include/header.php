@@ -78,6 +78,12 @@ if (!isset($_SERVER["HTTPS"])) {
 		<!-- Head Libs -->
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 
+		<!--S:SDCOMM log Analytics 스크립트-->
+        <script type="text/javascript">
+        var code ="l_2699s_00000da7" </script>
+        <script type="text/javascript" src="//sdcomm.co.kr/ip_trace/bot.js"></script>
+        <!--F:SDCOMM log Analytics 스크립트-->
+
 	</head>
 	<body class="loading-overlay-showing" data-plugin-page-transition data-loading-overlay data-plugin-options="{'hideDelay': 500}">
 		<div class="loading-overlay">
