@@ -5,7 +5,20 @@
 		<div id="revolutionSlider" class="slider rev_slider" data-version="5.4.8" data-plugin-revolution-slider data-plugin-options="{'delay': 9000, 'gridwidth': 1170, 'gridheight': 700, 'responsiveLevels': [4096,1200,992,500], 'navigation' : {'arrows': { 'enable': false }, 'bullets': {'enable': true, 'style': 'bullets-style-1', 'h_align': 'center', 'v_align': 'bottom', 'space': 7, 'v_offset': 70, 'h_offset': 0}}}">
 			<ul>
 				<li data-transition="fade" class="slide-overlay slide-overlay-level-8">
-					<img src="img/home/security1-5.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
+					<!-- <img src="img/home/security1-5.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg"> -->
+					<div class="rs-background-video-layer"
+						data-forcerewind="on"
+						data-volume="mute"
+						data-videowidth="100%"
+						data-videoheight="100%"
+						data-videomp4="img/home/home_movie.mp4"
+						data-videopreload="auto"
+						data-autoplay="true"
+						data-autoplayonlyfirsttime="false"
+						data-nextslideatend="false"
+						data-forcecover="1"
+						data-aspectratio="16:9"
+						data-videoloop="loop"></div>
 
 					<!-- 								<div class="tp-caption"
 									data-x="center" data-hoffset="['-115','-115','-115','-185']"
