@@ -49,23 +49,23 @@
 					<a class="tp-caption btn btn-light-2 btn-outline font-weight-semibold" data-frames='[{"delay":500,"speed":2000,"frame":"0","from":"opacity:0;y:50%;","to":"o:1;y:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]' data-hash data-hash-offset="85" href="shred.php" data-x="center" data-hoffset="0" data-y="center" data-voffset="['90','90','90','45']" data-whitespace="nowrap" data-fontsize="['15','15','15','33']" data-paddingtop="['15','15','15','40']" data-paddingright="['45','45','45','110']" data-paddingbottom="['15','15','15','40']" data-paddingleft="['45','45','45','110']">자세히 보기</a>
 
 				</li>
-				<li class="slide-overlay" data-transition="fade">
+				<!-- <li class="slide-overlay" data-transition="fade">
 					<img src="img/home/security1-4.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
 
 					<h1 class="tp-caption font-weight-extra-bold text-color-light negative-ls-2" data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"sX:1.5;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]' data-x="center" data-y="center" data-voffset="['-55','-55','-55','-55']" data-fontsize="['50','50','50','90']" data-lineheight="['55','55','55','95']" data-letterspacing="-1">보안이 생명이다</h1>
 
-					<!--									
+					
 								<div class="tp-caption font-weight-light text-center"
 									data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":2000,"split":"chars","splitdelay":0.05,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
 									data-x="center"
 									data-y="center" data-voffset="['-5','-5','-5','15']"
 									data-fontsize="['18','18','18','35']"
 									data-lineheight="['20','20','20','40']"
-									style="color: #b5b5b5;">개인정보처리의 시작과 끝은 보안입니다</div> -->
+									style="color: #b5b5b5;">개인정보처리의 시작과 끝은 보안입니다</div>
 
 					<a class="tp-caption btn btn-light-2 btn-outline font-weight-semibold" data-frames='[{"delay":500,"speed":2000,"frame":"0","from":"opacity:0;y:50%;","to":"o:1;y:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]' data-hash data-hash-offset="85" href="facility.php" data-x="center" data-hoffset="0" data-y="center" data-voffset="['65','65','65','105']" data-whitespace="nowrap" data-fontsize="['15','15','15','33']" data-paddingtop="['15','15','15','40']" data-paddingright="['45','45','45','110']" data-paddingbottom="['15','15','15','40']" data-paddingleft="['45','45','45','110']">시설현황 보기</a>
 
-				</li>
+				</li> -->
 			</ul>
 		</div>
 	</div>
