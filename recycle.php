@@ -29,7 +29,10 @@
 			</div>
 
 			<div class="col-lg-12 mb-5">
-				<video src="img/recycle/cable2.mp4" class="img-fluid rounded" autoplay loop muted playsinline preload="metadata" style="width: 100%; object-fit: cover;"></video>
+				<video class="img-fluid rounded" autoplay loop muted playsinline preload="metadata" poster="img/recycle/cable2_poster.jpg" style="width: 100%; object-fit: cover;">
+					<source src="img/recycle/cable2.webm" type="video/webm">
+					<source src="img/recycle/cable2.mp4" type="video/mp4">
+				</video>
 			</div>
 
 			<!-- 일반불용케이블 처리 -->

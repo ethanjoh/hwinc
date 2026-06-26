@@ -28,7 +28,11 @@
 			</div>
 
 			<div class="col-lg-12 mb-5">
-				<video src="img/generic/shredding.mp4" class="img-fluid rounded" autoplay loop muted playsinline preload="metadata" style="width: 100%; object-fit: cover;"></video>
+				<video class="img-fluid rounded" autoplay loop muted playsinline preload="metadata" poster="img/generic/shredding2_poster.jpg" style="width: 100%; object-fit: cover;">
+					<source src="img/generic/shredding2.webm" type="video/webm">
+					<source src="img/generic/shredding2.mp4" type="video/mp4">
+				</video>
+
 			</div>
 
 			<!-- 입고파쇄 -->
