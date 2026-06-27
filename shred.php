@@ -28,9 +28,9 @@
 			</div>
 
 			<div class="col-lg-12 mb-5">
-				<video class="img-fluid rounded" autoplay loop muted playsinline preload="metadata" poster="img/generic/shredding3_poster.jpg" style="width: 100%; object-fit: cover;">
-					<source src="img/generic/shredding3.webm" type="video/webm">
-					<source src="img/generic/shredding3.mp4" type="video/mp4">
+				<video class="img-fluid rounded" autoplay loop muted playsinline preload="metadata" poster="img/generic/shredding4_poster.jpg" style="width: 100%; object-fit: cover;">
+					<source src="img/generic/shredding4.webm" type="video/webm">
+					<source src="img/generic/shredding4.mp4" type="video/mp4">
 				</video>
 
 			</div>
