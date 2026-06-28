@@ -14,6 +14,9 @@
 - **데이터베이스 덤프 파일(`billing.sql`) Git 추적 제거**
   - 로컬 데이터베이스 덤프 파일인 `billing.sql`을 Git 추적에서 제거하고 GitHub에서 삭제했습니다.
   - `.gitignore`에 `billing.sql`을 추가하여 향후 재커밋을 방지했습니다.
+- **DB 접속 설정 파일(`util/config.php`) Git 추적 제거**
+  - 데이터베이스 호스트, 계정, 비밀번호가 평문으로 포함된 설정 파일을 Git 추적에서 제거하고 GitHub에서 삭제했습니다.
+  - `.gitignore`에 `util/config.php`를 추가하여 향후 재커밋을 방지했습니다.
 
 ---
 
