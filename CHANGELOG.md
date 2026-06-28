@@ -4,6 +4,19 @@
 
 ---
 
+## [2026-06-28]
+
+### 버전 관리 및 보안 강화 (Chore & Security)
+- **FTP 접속 정보 파일(`sftp.json`) Git 히스토리 완전 제거**
+  - VS Code SFTP 확장 설정 파일(`.vscode/sftp.json`)에 FTP 비밀번호가 평문으로 포함된 채 GitHub에 커밋되어 있던 문제를 발견하여 조치했습니다.
+  - `git filter-repo`를 사용하여 **전체 커밋 히스토리(37개 커밋)에서 해당 파일을 완전히 제거**하고, force push로 원격 저장소에 반영했습니다.
+  - `.vscode/` 디렉토리 전체를 `.gitignore`에 등록하여 향후 IDE 설정 파일이 재커밋되지 않도록 방지했습니다.
+- **데이터베이스 덤프 파일(`billing.sql`) Git 추적 제거**
+  - 로컬 데이터베이스 덤프 파일인 `billing.sql`을 Git 추적에서 제거하고 GitHub에서 삭제했습니다.
+  - `.gitignore`에 `billing.sql`을 추가하여 향후 재커밋을 방지했습니다.
+
+---
+
 ## [2026-06-27]
 
 ### 추가 및 개선 사항 (Feat & Refactor)
