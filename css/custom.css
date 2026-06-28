@@ -1,4 +1,9 @@
 /* Add here all your CSS customizations */
+
+/* 동영상 로딩 전 검은 화면 방지 */
+.slider-container.rev_slider_wrapper {
+    background: #1a1a2e;
+}
 /* pc 화면 */
 @media (min-width: 768px) {
     #kakao-talk-channel-chat-button {
