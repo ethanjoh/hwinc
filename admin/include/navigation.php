@@ -14,7 +14,7 @@
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="setting.php"><i class="fa fa-gear fa-fw"></i> 세팅</a></li>
@@ -31,7 +31,9 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li class="text-center">
-                            <a href="main.php"><i class="fas fa-tachometer-alt fa-3x"></i> <h4>대시보드</h4></a>
+                            <a href="main.php"><i class="fas fa-tachometer-alt fa-3x"></i>
+                                <h4>대시보드</h4>
+                            </a>
                         </li>
                         <li>
                             <a href="billing.php"><i class="fas fa-won-sign"></i> 비용 청구</a>
@@ -40,7 +42,7 @@
                             <a href="billing-list.php"><i class="fas fa-list-ol"></i> 청구 내역</a>
                         </li>
                         <li>
-                            <a href="upload-map.php" target="_blank"><i class="fas fa-map"></i> 지도 그리기</a>
+                            <a href="upload-map.php"><i class="fas fa-map"></i> 지도 그리기</a>
                         </li>
                     </ul>
                 </div>
