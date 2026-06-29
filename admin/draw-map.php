@@ -434,11 +434,7 @@ include_once 'include/navigation.php';
                     // 지도 이동
                     map.panTo(coords);
 
-                    // 기존 인포윈도우 모두 닫기
-                    for (var key in infoWindowsMap) {
-                        infoWindowsMap[key].close();
-                    }
-                    // 인포윈도우 활성화
+                    // 인포윈도우 활성화 (기존 인포윈도우를 닫지 않고 모두 표시되도록 유지)
                     infoWindowsMap[id].open(map, markersMap[id]);
 
                     // 로드뷰 로딩
@@ -486,6 +482,9 @@ include_once 'include/navigation.php';
                             markersMap[index] = marker;
                             infoWindowsMap[index] = infowindow;
                             coordsMap[index] = coords;
+
+                            // 로딩 시점에 인포윈도우 표시
+                            infowindow.open(map, marker);
 
                             // 마커 클릭 이벤트 연동
                             kakao.maps.event.addListener(marker, 'click', function() {
