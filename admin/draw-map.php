@@ -7,6 +7,7 @@ if (!isset($_SESSION['s_id'])) {
 }
 
 include_once 'include/header.php';
+include_once '../util/api-keys.php';
 
 // 설정
 $uploads_dir = './map-data';
@@ -415,11 +416,11 @@ include_once 'include/navigation.php';
             <div class="modal fade" id="roadviewModal" tabindex="-1" role="dialog" aria-labelledby="roadviewModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                     <div class="modal-content" style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: none;">
-                        <div class="modal-header" style="background-color: #4e73df; color: #fff; border-bottom: none; padding: 15px 20px;">
-                            <h5 class="modal-title" id="roadviewModalLabel" style="font-weight: bold; font-size: 16px;">
+                        <div class="modal-header" style="background-color: #4e73df; color: #fff; border-bottom: none; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+                            <h5 class="modal-title" id="roadviewModalLabel" style="font-weight: bold; font-size: 16px; margin: 0;">
                                 <i class="fas fa-street-view"></i> <span id="roadview-title">로드뷰</span>
                             </h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #fff; opacity: 0.8; text-shadow: none;">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #fff; opacity: 0.8; text-shadow: none; margin: 0;">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
@@ -459,7 +460,7 @@ include_once 'include/navigation.php';
             fclose($fp);
             ?>
 
-            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b2d3d5bba9dfb8777d3ac1fff27b7cc9&libraries=services"></script>
+            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=<?= KAKAO_MAP_KEY ?>&libraries=services"></script>
 
             <script>
                 var listData = [

@@ -1,4 +1,7 @@
-<?php include "include/header.php"; ?>
+<?php 
+include "include/header.php"; 
+include_once "util/api-keys.php"; 
+?>
 
 <div role="main" class="main">
 
@@ -77,7 +80,7 @@
 <?php include "include/script.php"; ?>
 
 <!-- 다음지도 사용 -->
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b2d3d5bba9dfb8777d3ac1fff27b7cc9&libraries=services"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=<?= KAKAO_MAP_KEY ?>&libraries=services"></script>
 <script>
 	var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
 	var options = { //지도를 생성할 때 필요한 기본 옵션

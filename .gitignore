@@ -13,3 +13,4 @@ billing.sql
 
 # Config files with credentials
 util/config.php
+util/api-keys.php

@@ -1,4 +1,5 @@
 <?php
+include_once '../util/api-keys.php';
 
 // 데이터베이스에서 읽어서 주소와 인포윈도우 내용을 출력하는 함수 작성
 function WriteAddress()
@@ -29,7 +30,7 @@ function WriteAddress()
 <body>
     <h1>주소 -> 좌표 전환, 다중 마커, 다중 인포윈도우 표시</h1>
     <div id="map"></div>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b2d3d5bba9dfb8777d3ac1fff27b7cc9&libraries=services"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=<?= KAKAO_MAP_KEY ?>&libraries=services"></script>
     <script>
 
         var listData = [
