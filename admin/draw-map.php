@@ -209,8 +209,8 @@ move_uploaded_file($_FILES['myfile']['tmp_name'], "$uploads_dir/$name");
         }
     }
 
-    /* 프린트 전용 레이아웃 스타일 및 시뮬레이션용 클래스 */
-    @media print, body.printing-active {
+    /* 프린트 전용 레이아웃 스타일 */
+    @media print {
         #wrapper > nav,
         .header-btn-area,
         .place-list-panel,
@@ -232,6 +232,7 @@ move_uploaded_file($_FILES['myfile']['tmp_name'], "$uploads_dir/$name");
             box-shadow: none !important;
             height: 600px !important;
             margin: 0 !important;
+            width: 100% !important;
         }
         .map-canvas-area {
             width: 100% !important;
@@ -251,9 +252,6 @@ move_uploaded_file($_FILES['myfile']['tmp_name'], "$uploads_dir/$name");
             border-bottom: 2px solid #333 !important;
             padding-bottom: 10px !important;
         }
-    }
-
-    @media print {
         @page {
             size: landscape;
             margin: 10mm;
@@ -267,20 +265,6 @@ move_uploaded_file($_FILES['myfile']['tmp_name'], "$uploads_dir/$name");
             visibility: visible !important;
             max-width: none !important;
             max-height: none !important;
-        }
-    }
-
-    /* 인쇄 미리보기 준비 상태(on-screen)에서는 가로 1020px로 강제 고정하여 지도가 짤리지 않게 영역 계산 유도 */
-    body.printing-active .map-container-layout {
-        width: 1020px !important;
-        margin: 0 auto !important;
-    }
-
-    /* 실제 프린터 출력 시에는 다시 가로 100% 영역을 차지하도록 복원 */
-    @media print {
-        .map-container-layout {
-            width: 100% !important;
-            margin: 0 !important;
         }
     }
 </style>
@@ -554,37 +538,33 @@ include_once 'include/navigation.php';
 
                 // 프린트 실행 함수
                 function printMap() {
-                    // 1. 임시 인쇄 활성화 클래스 적용 (지도를 가로 100% 영역으로 강제 리사이징 유도)
-                    $('body').addClass('printing-active');
-                    
-                    // 2. 카카오 지도 재설정 트리거
+                    window.print();
+                }
+
+                // 브라우저 인쇄 이벤트 리스너 연동 (Ctrl+P 및 메뉴 인쇄 대응)
+                window.addEventListener('beforeprint', function() {
+                    // 지도 레이아웃 재계산 및 bounds 조정
                     map.relayout();
-                    
-                    // 3. 인쇄 시에는 "마킹된 곳 전체가 보이는 상태"로 강제 조정
                     if (validLocations.length > 0) {
                         map.setBounds(bounds);
                     }
+                });
 
-                    // 4. 지도가 갱신 렌더링될 때까지 여유있게 대기 (1000ms)
-                    setTimeout(function() {
-                        window.print();
-                        
-                        // 5. 인쇄 종료 후 원래 3단 레이아웃으로 맵을 복원
-                        $('body').removeClass('printing-active');
-                        map.relayout();
-                        
-                        // 원래 활성화되어 있던 첫 장소나 클릭 장소의 줌 상태로 복원
-                        var activeItem = $('.place-item.active');
-                        if (activeItem.length) {
-                            var activeId = activeItem.attr('id').replace('place-item-', '');
-                            if (coordsMap[activeId]) {
-                                map.setCenter(coordsMap[activeId]);
-                            }
-                        } else if (validLocations.length > 0) {
-                            map.setBounds(bounds);
+                window.addEventListener('afterprint', function() {
+                    // 화면 복구 후 지도 레이아웃 재계산
+                    map.relayout();
+                    
+                    // 원래 활성화되어 있던 장소로 지도의 중심 복원
+                    var activeItem = $('.place-item.active');
+                    if (activeItem.length) {
+                        var activeId = activeItem.attr('id').replace('place-item-', '');
+                        if (coordsMap[activeId]) {
+                            map.setCenter(coordsMap[activeId]);
                         }
-                    }, 1000);
-                }
+                    } else if (validLocations.length > 0) {
+                        map.setBounds(bounds);
+                    }
+                });
             </script>
 
         </div>
