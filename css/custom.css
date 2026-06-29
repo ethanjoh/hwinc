@@ -35,3 +35,14 @@
     bottom: 30px; /* 화면 아래쪽으로부터의 거리, 숫자만 변경 */
     }
 }
+
+/* 테이블 헤더 배경색 변경 (초록/민트 #17a2b8 -> 네비게이션 활성화 색상 #47648B) */
+.table > thead > tr.info > th,
+.table > thead > tr.info > td,
+.table > tbody > tr.info > th,
+.table > tbody > tr.info > td,
+.table > tfoot > tr.info > th,
+.table > tfoot > tr.info > td {
+	background-color: #47648B !important;
+}
+
