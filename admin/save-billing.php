@@ -6,26 +6,29 @@ include_once '../util/functions.php';
 $connect = mysqli_connect($host, $dbid, $dbpass, $dbname);
 
 //$s_id           = $_SESSION['s_id'];
-$t_company_name = $_POST['company_name'];
-$sdate          = $_POST['sdate'];
-$t_buyer_name   = $_POST['buyer_name'];
-$t_buyer_tel_1  = $_POST['buyer_tel_1'];
-$t_buyer_tel_2  = $_POST['buyer_tel_2'];
-$t_buyer_tel_3  = $_POST['buyer_tel_3'];
-$t_weight       = $_POST['weight'];
-$t_amount       = $_POST['amount'];
-
-$company_name = trim($t_company_name);
-$buyer_name   = trim($t_buyer_name);
-$buyer_tel_1  = trim($t_buyer_tel_1);
-$buyer_tel_2  = trim($t_buyer_tel_2);
-$buyer_tel_3  = trim($t_buyer_tel_3);
-$weight       = trim($t_weight);
-$amount       = trim($t_amount);
+// $_POST 데이터가 없을 경우를 대비하여 Null 병합 연산자(??) 사용 및 공백 제거
+$sdate        = trim($_POST['sdate'] ?? '');
+$company_name = trim($_POST['company_name'] ?? '');
+$buyer_name   = trim($_POST['buyer_name'] ?? '');
+$buyer_tel_1  = trim($_POST['buyer_tel_1'] ?? '');
+$buyer_tel_2  = trim($_POST['buyer_tel_2'] ?? '');
+$buyer_tel_3  = trim($_POST['buyer_tel_3'] ?? '');
+$weight       = trim($_POST['weight'] ?? '');
+$amount       = trim($_POST['amount'] ?? '');
 $paid         = 'N';
 
+// SQL 인젝션 및 작은따옴표(') 입력 시 발생하는 쿼리 오류를 방지하기 위해 이스케이프 처리
+$sdate_esc        = mysqli_real_escape_string($connect, $sdate);
+$company_name_esc = mysqli_real_escape_string($connect, $company_name);
+$buyer_name_esc   = mysqli_real_escape_string($connect, $buyer_name);
+$buyer_tel_1_esc  = mysqli_real_escape_string($connect, $buyer_tel_1);
+$buyer_tel_2_esc  = mysqli_real_escape_string($connect, $buyer_tel_2);
+$buyer_tel_3_esc  = mysqli_real_escape_string($connect, $buyer_tel_3);
+$weight_esc       = mysqli_real_escape_string($connect, $weight);
+$amount_esc       = mysqli_real_escape_string($connect, $amount);
+
 $qry = "INSERT INTO billing (company_name, sdate, buyer_name, buyer_tel_1, buyer_tel_2, buyer_tel_3, weight, amount, paid)
-                VALUES ('$company_name', '$sdate', '$buyer_name', '$buyer_tel_1', '$buyer_tel_2', '$buyer_tel_3', '$weight', '$amount', '$paid') ";
+                VALUES ('$company_name_esc', '$sdate_esc', '$buyer_name_esc', '$buyer_tel_1_esc', '$buyer_tel_2_esc', '$buyer_tel_3_esc', '$weight_esc', '$amount_esc', '$paid') ";
 $res = mysqli_query($connect, $qry);
 
 if ($res) {
