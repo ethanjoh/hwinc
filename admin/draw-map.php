@@ -269,6 +269,20 @@ move_uploaded_file($_FILES['myfile']['tmp_name'], "$uploads_dir/$name");
             max-height: none !important;
         }
     }
+
+    /* 인쇄 미리보기 준비 상태(on-screen)에서는 가로 1020px로 강제 고정하여 지도가 짤리지 않게 영역 계산 유도 */
+    body.printing-active .map-container-layout {
+        width: 1020px !important;
+        margin: 0 auto !important;
+    }
+
+    /* 실제 프린터 출력 시에는 다시 가로 100% 영역을 차지하도록 복원 */
+    @media print {
+        .map-container-layout {
+            width: 100% !important;
+            margin: 0 !important;
+        }
+    }
 </style>
 
 <body>
@@ -551,7 +565,7 @@ include_once 'include/navigation.php';
                         map.setBounds(bounds);
                     }
 
-                    // 4. 지도가 갱신 렌더링될 때까지 여유있게 대기 (600ms)
+                    // 4. 지도가 갱신 렌더링될 때까지 여유있게 대기 (1000ms)
                     setTimeout(function() {
                         window.print();
                         
@@ -569,7 +583,7 @@ include_once 'include/navigation.php';
                         } else if (validLocations.length > 0) {
                             map.setBounds(bounds);
                         }
-                    }, 600);
+                    }, 1000);
                 }
             </script>
 
