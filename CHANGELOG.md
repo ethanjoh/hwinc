@@ -72,6 +72,9 @@
 - **카카오/다음 지도 API 키 관리 방식 개선 및 Git 추적 제외**
   - 소스 코드(`contact-us.php`, `admin/draw-map.php`, `map/multi-map.php`)에 하드코딩되어 있던 지도 API 키를 새 파일인 `util/api-keys.php`에 분리하여 상수(`KAKAO_MAP_KEY`)로 관리하도록 변경했습니다.
   - `.gitignore`에 `util/api-keys.php`를 추가하여 민감한 API 키가 Git 저장소에 노출 및 동기화되지 않도록 보안을 강화했습니다. (서버 운영 시 수동 업로드 필요)
+- **사용되지 않는 레거시 파일 점검 (`map/multi-map.php`)**
+  - 다중 마커 지도 구현 테스트용으로 생성되었던 `map/multi-map.php` 파일이 현재 홈페이지 내 어디에서도 호출되지 않는 미사용 파일임을 확인했습니다.
+  - 만일의 사태(외부 접근 등)를 대비하여 해당 파일의 지도 API 키 역시 중앙 관리 상수(`KAKAO_MAP_KEY`)를 참조하도록 보안 조치를 적용해 두었습니다.
 
 ---
 
