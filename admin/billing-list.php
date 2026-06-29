@@ -13,17 +13,17 @@ include_once 'include/header.php';
 
     <div id="wrapper">
 
-<?php
+        <?php
 
-include_once 'include/navigation.php';
+        include_once 'include/navigation.php';
 
-$connect = mysqli_connect($host, $dbid, $dbpass, $dbname);
+        $connect = mysqli_connect($host, $dbid, $dbpass, $dbname);
 
-$sql   = "SELECT * FROM billing ORDER BY no DESC";
-$res   = mysqli_query($connect, $sql);
-$total = mysqli_num_rows($res);
+        $sql   = "SELECT * FROM billing ORDER BY no DESC";
+        $res   = mysqli_query($connect, $sql);
+        $total = mysqli_num_rows($res);
 
-?>
+        ?>
 
         <div id="page-wrapper">
             <div class="row">
@@ -34,49 +34,49 @@ $total = mysqli_num_rows($res);
             </div>
             <!-- /.row -->
             <div class="row add_user">
-<?php
+                <?php
 
-$scale = 10;
-$page  = set_var($_GET['page']);
+                $scale = 10;
+                $page  = set_var($_GET['page']);
 
-if ($page == '') {
-    $page = 1;
-}
+                if ($page == '') {
+                    $page = 1;
+                }
 
-$cpage     = intval($page);
-$totalpage = intval($total / $scale);
+                $cpage     = intval($page);
+                $totalpage = intval($total / $scale);
 
-if ($totalpage * $scale != $total) {
-    $totalpage = $totalpage + 1;
-}
+                if ($totalpage * $scale != $total) {
+                    $totalpage = $totalpage + 1;
+                }
 
-if ($cpage == 1) {
-    $cline = 0;
-} else {
-    $cline = ($cpage * $scale) - $scale;
-}
+                if ($cpage == 1) {
+                    $cline = 0;
+                } else {
+                    $cline = ($cpage * $scale) - $scale;
+                }
 
-$limit = $cline + $scale;
+                $limit = $cline + $scale;
 
-if ($limit >= $total) {
-    $limit = $total;
-}
+                if ($limit >= $total) {
+                    $limit = $total;
+                }
 
-$scale1 = $limit - $cline;
+                $scale1 = $limit - $cline;
 
-$sql    = "SELECT * FROM billing ORDER BY sdate DESC LIMIT $cline, $scale1";
-$result = mysqli_query($connect, $sql);
+                $sql    = "SELECT * FROM billing ORDER BY sdate DESC LIMIT $cline, $scale1";
+                $result = mysqli_query($connect, $sql);
 
-//게시판 글번호를 실제 DB 저장번호와 관계없이 역순으로 표시
-if ($page > 1 && $page < $totalpage) {
-    $postNo = $total - $scale;
-} elseif ($page == $totalpage) {
-    $postNo = $total - $scale * ($page - 1);
-} else {
-    $postNo = $total;
-}
+                //게시판 글번호를 실제 DB 저장번호와 관계없이 역순으로 표시
+                if ($page > 1 && $page < $totalpage) {
+                    $postNo = $total - $scale;
+                } elseif ($page == $totalpage) {
+                    $postNo = $total - $scale * ($page - 1);
+                } else {
+                    $postNo = $total;
+                }
 
-echo <<<HEREDOC
+                echo <<<HEREDOC
                 <div class="col-lg-12 margin_top_30">
                     <div class="table-responsive">
                         <table class="table table-striped">
@@ -97,30 +97,30 @@ echo <<<HEREDOC
                             <tbody>
 HEREDOC;
 
-if (mysqli_num_rows($result) > 0) {
+                if (mysqli_num_rows($result) > 0) {
 
-    for ($i = 0; $row = mysqli_fetch_array($result); $i++) {
+                    for ($i = 0; $row = mysqli_fetch_array($result); $i++) {
 
-        //$sql1 = "SELECT * FROM billing";
-        //$res1 = mysqli_query($connect, $sql1);
-        //$ㅑrow1 = mysqli_fetch_array($res1);
+                        //$sql1 = "SELECT * FROM billing";
+                        //$res1 = mysqli_query($connect, $sql1);
+                        //$ㅑrow1 = mysqli_fetch_array($res1);
 
-        $post_no      = $postNo - $i;
-        $company_name = $row['company_name'];
-        $buyer_tel    = $row['buyer_tel_1'] . "-" . $row['buyer_tel_2'] . "-" . $row['buyer_tel_3'];
-        $weight       = number_format($row['weight']);
-        $amount       = number_format($row['amount']);
-        $pg_tid       = $row['pg_tid'];
+                        $post_no      = $postNo - $i;
+                        $company_name = $row['company_name'];
+                        $buyer_tel    = $row['buyer_tel_1'] . "-" . $row['buyer_tel_2'] . "-" . $row['buyer_tel_3'];
+                        $weight       = number_format($row['weight']);
+                        $amount       = number_format($row['amount']);
+                        $pg_tid       = $row['pg_tid'];
 
-        if ($row['paid'] == "Y") {
-            $url     = "'https://iniweb.inicis.com/DefaultWebApp/mall/cr/cm/mCmReceipt_head.jsp?noTid=" . $pg_tid . "&noMethod=1'";
-            $opt     = "'_blank', 'width=450, height=600'";
-            $receipt = '<a href="#" onclick="window.open(' . $url . ',' . $opt . ');"><i class="fas fa-print"></i></a>';
-        } else {
-            $receipt = '<i class="far fa-times-circle"></i>';
-        }
+                        if ($row['paid'] == "Y") {
+                            $url     = "'https://iniweb.inicis.com/DefaultWebApp/mall/cr/cm/mCmReceipt_head.jsp?noTid=" . $pg_tid . "&noMethod=1'";
+                            $opt     = "'_blank', 'width=450, height=600'";
+                            $receipt = '<a href="#" onclick="window.open(' . $url . ',' . $opt . ');"><i class="fas fa-print"></i></a>';
+                        } else {
+                            $receipt = '<i class="far fa-times-circle"></i>';
+                        }
 
-        echo <<<HEREDOC
+                        echo <<<HEREDOC
 
                                 <tr>
                                     <td class="text-center">{$post_no}</td>
@@ -135,43 +135,42 @@ if (mysqli_num_rows($result) > 0) {
                                     <td class="text-center"><a href="del-pay.php?no={$row['no']}"><i class="fas fa-trash-alt"></i></a></td>
                                 </tr>
 HEREDOC;
-    }
-
-} else {
-    echo <<<HEREDOC
+                    }
+                } else {
+                    echo <<<HEREDOC
                                 <tr>
                                     <td colspan="10" class="text-center">결제 내역이 없습니다.</td>
                                 </tr>
 HEREDOC;
-}
+                }
 
-echo <<<HEREDOC
+                echo <<<HEREDOC
                             </tbody>
                         </table>
                     </div>
                 </div>
 HEREDOC;
-?>
+                ?>
                 <div class="result_msg"></div>
 
                 <div class="more-page-button">
                     <ul class="pagination">
-<?php
+                        <?php
 
-//쪽 수를 표시
-$url = $_SERVER['SCRIPT_NAME'] . "?";
-page_mobile($totalpage, $cpage, $url);
+                        //쪽 수를 표시
+                        $url = $_SERVER['SCRIPT_NAME'] . "?";
+                        page_mobile($totalpage, $cpage, $url);
 
-?>
+                        ?>
 
                     </ul>
                 </div>
                 <div class="more-page-button">
                     <!-- <button type="submit" class="btn btn-info export-btn"><i class="fa fa-file-excel-o" aria-hidden="true"></i> 엑셀로 저장</button> -->
-                    <a href="export-excel.php" class="btn btn-info"><i class="fa fa-file-excel-o" aria-hidden="true"></i> 엑셀로 저장</a>
+                    <a href="export-csv.php" class="btn btn-info"><i class="fa fa-file-excel-o" aria-hidden="true"></i> CSV로 저장</a>
                 </div>
 
-			</div>
+            </div>
 
         </div>
         <!-- /#page-wrapper -->
@@ -179,10 +178,10 @@ page_mobile($totalpage, $cpage, $url);
     </div>
     <!-- /#wrapper -->
 
-<?php
+    <?php
 
-include_once 'include/footer.php';
-?>
+    include_once 'include/footer.php';
+    ?>
 
 </body>
 

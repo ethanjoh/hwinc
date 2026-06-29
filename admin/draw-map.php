@@ -49,8 +49,8 @@ move_uploaded_file($_FILES['myfile']['tmp_name'], "$uploads_dir/$name");
     .map-container-layout {
         display: flex;
         flex-direction: row;
-        height: calc(100vh - 160px);
-        min-height: 550px;
+        height: calc(100vh - 220px);
+        min-height: 500px;
         background-color: #fff;
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -209,13 +209,85 @@ move_uploaded_file($_FILES['myfile']['tmp_name'], "$uploads_dir/$name");
         }
     }
 
+    /* 인쇄 전 수동 레이아웃 적용 (printMap 함수에서 사용) */
+    body.printing-mode #wrapper > nav,
+    body.printing-mode .header-btn-area,
+    body.printing-mode .place-list-panel,
+    body.printing-mode .panel-section-header,
+    body.printing-mode #roadviewModal,
+    body.printing-mode .row {
+        display: none !important;
+    }
+    body.printing-mode #wrapper,
+    body.printing-mode #page-wrapper {
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        background-color: transparent !important;
+        min-height: 0 !important;
+        height: 100vh !important;
+        width: 100% !important;
+        overflow: hidden !important;
+        display: block !important;
+    }
+    body.printing-mode h1.page-header {
+        display: block !important;
+        margin: 0 0 8px 0 !important;
+        padding-bottom: 8px !important;
+        font-size: 20px !important;
+        border-bottom: 2px solid #333 !important;
+        height: 36px !important;
+        overflow: hidden !important;
+    }
+    body.printing-mode .map-container-layout {
+        display: block !important;
+        border: none !important;
+        box-shadow: none !important;
+        /* A4 가로 크기에 맞춘 고정 크기로 타일이 미리 로드되게 함 */
+        width: 277mm !important;
+        height: 175mm !important;
+        margin: 0 auto !important;
+        overflow: hidden !important;
+        border-radius: 0 !important;
+    }
+    body.printing-mode .map-canvas-area {
+        width: 100% !important;
+        height: 100% !important;
+        display: block !important;
+        overflow: hidden !important;
+    }
+    body.printing-mode .map-body-area {
+        height: 100% !important;
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+    body.printing-mode #map {
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden !important;
+    }
+
     /* 프린트 전용 레이아웃 스타일 */
     @media print {
+        @page {
+            size: A4 landscape;
+            margin: 10mm;
+        }
+        html, body {
+            width: 100% !important;
+            height: 100% !important;
+            overflow: hidden !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background-color: #fff !important;
+        }
+        /* 불필요한 UI 요소 숨김 */
         #wrapper > nav,
         .header-btn-area,
         .place-list-panel,
         .panel-section-header,
-        #roadviewModal {
+        #roadviewModal,
+        .row {
             display: none !important;
         }
         #wrapper,
@@ -224,43 +296,56 @@ move_uploaded_file($_FILES['myfile']['tmp_name'], "$uploads_dir/$name");
             margin: 0 !important;
             border: none !important;
             background-color: transparent !important;
-            min-height: auto !important;
+            min-height: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+            overflow: hidden !important;
+            display: block !important;
+        }
+        h1.page-header {
+            display: block !important;
+            margin: 0 0 8px 0 !important;
+            padding-bottom: 8px !important;
+            font-size: 20px !important;
+            border-bottom: 2px solid #333 !important;
+            height: 36px !important;
+            overflow: hidden !important;
+            page-break-after: avoid !important;
+            break-after: avoid !important;
         }
         .map-container-layout {
             display: block !important;
             border: none !important;
             box-shadow: none !important;
-            height: 600px !important;
+            /* 인쇄 시에도 동일한 크기 유지 */
+            width: 277mm !important;
+            height: 175mm !important;
             margin: 0 !important;
-            width: 100% !important;
+            overflow: hidden !important;
+            page-break-inside: avoid !important;
+            break-inside: avoid !important;
         }
         .map-canvas-area {
             width: 100% !important;
             height: 100% !important;
             display: block !important;
+            overflow: hidden !important;
         }
         .map-body-area {
             height: 100% !important;
+            width: 100% !important;
+            overflow: hidden !important;
         }
         #map {
             width: 100% !important;
             height: 100% !important;
-        }
-        h1.page-header {
-            margin-top: 0 !important;
-            font-size: 24px !important;
-            border-bottom: 2px solid #333 !important;
-            padding-bottom: 10px !important;
-        }
-        @page {
-            size: landscape;
-            margin: 10mm;
+            overflow: hidden !important;
         }
         * {
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
         }
-        #map img {
+        #map img, #map canvas {
             display: inline !important;
             visibility: visible !important;
             max-width: none !important;
@@ -536,34 +621,89 @@ include_once 'include/navigation.php';
                     });
                 });
 
-                // 프린트 실행 함수
-                function printMap() {
-                    window.print();
+                // 인쇄 모드 수동 적용/해제 함수
+                function applyPrintLayout() {
+                    document.body.classList.add('printing-mode');
+                }
+                function removePrintLayout() {
+                    document.body.classList.remove('printing-mode');
                 }
 
-                // 브라우저 인쇄 이벤트 리스너 연동 (Ctrl+P 및 메뉴 인쇄 대응)
+                // bounds를 비율만큼 확장하여 마커가 잘리지 않도록 여유를 두는 함수
+                function getPaddedBounds(originalBounds, ratio) {
+                    var sw = originalBounds.getSouthWest();
+                    var ne = originalBounds.getNorthEast();
+                    var latDiff = ne.getLat() - sw.getLat();
+                    var lngDiff = ne.getLng() - sw.getLng();
+                    var latPad = latDiff * ratio;
+                    var lngPad = lngDiff * ratio;
+                    var padded = new kakao.maps.LatLngBounds();
+                    padded.extend(new kakao.maps.LatLng(sw.getLat() - latPad, sw.getLng() - lngPad));
+                    padded.extend(new kakao.maps.LatLng(ne.getLat() + latPad, ne.getLng() + lngPad));
+                    return padded;
+                }
+
+                var isPrintingAction = false;
+
+                // 프린트 실행 함수
+                function printMap() {
+                    isPrintingAction = true;
+                    // 1) 인쇄용 CSS 클래스를 먼저 적용하여 레이아웃을 인쇄 크기로 변경
+                    applyPrintLayout();
+
+                    // 2) 레이아웃 변경 후 지도 크기 재계산
+                    setTimeout(function() {
+                        // 강제 reflow 후 relayout
+                        var mapEl = document.getElementById('map');
+                        void mapEl.offsetHeight;
+                        map.relayout();
+
+                        // 3) 확장된 bounds로 모든 마커가 여유있게 보이도록 설정
+                        setTimeout(function() {
+                            if (validLocations.length > 0) {
+                                map.setBounds(getPaddedBounds(bounds, 0.15));
+                            }
+
+                            // 4) 타일 로딩 대기 후 인쇄
+                            setTimeout(function() {
+                                window.print();
+                            }, 800);
+                        }, 300);
+                    }, 200);
+                }
+
+                // Ctrl+P 등 직접 인쇄 시 동기적으로 bounds 재설정
                 window.addEventListener('beforeprint', function() {
-                    // 지도 레이아웃 재계산 및 bounds 조정
-                    map.relayout();
-                    if (validLocations.length > 0) {
-                        map.setBounds(bounds);
+                    if (!isPrintingAction) {
+                        // 강제 reflow로 @media print CSS 적용 후 정확한 크기 확보
+                        var mapEl = document.getElementById('map');
+                        void mapEl.offsetHeight;
+                        map.relayout();
+                        if (validLocations.length > 0) {
+                            map.setBounds(getPaddedBounds(bounds, 0.15));
+                        }
                     }
                 });
 
                 window.addEventListener('afterprint', function() {
-                    // 화면 복구 후 지도 레이아웃 재계산
-                    map.relayout();
-                    
-                    // 원래 활성화되어 있던 장소로 지도의 중심 복원
-                    var activeItem = $('.place-item.active');
-                    if (activeItem.length) {
-                        var activeId = activeItem.attr('id').replace('place-item-', '');
-                        if (coordsMap[activeId]) {
-                            map.setCenter(coordsMap[activeId]);
+                    isPrintingAction = false;
+                    // 인쇄 CSS 클래스 해제 후 화면 레이아웃 복구
+                    removePrintLayout();
+
+                    setTimeout(function() {
+                        map.relayout();
+
+                        // 원래 활성화되어 있던 장소로 지도 중심 복원
+                        var activeItem = $('.place-item.active');
+                        if (activeItem.length) {
+                            var activeId = activeItem.attr('id').replace('place-item-', '');
+                            if (coordsMap[activeId]) {
+                                map.setCenter(coordsMap[activeId]);
+                            }
+                        } else if (validLocations.length > 0) {
+                            map.setBounds(bounds);
                         }
-                    } else if (validLocations.length > 0) {
-                        map.setBounds(bounds);
-                    }
+                    }, 100);
                 });
             </script>
 

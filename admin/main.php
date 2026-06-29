@@ -19,8 +19,7 @@ if ($numOfPay > 0) {
     $num_pay = $numOfPay;
 } else {
     $num_pay = 0;
-}
-; // $sql1        = "SELECT * FROM member";; // $res1        = mysqli_query($connect, $sql1);; // $numOfMember = mysqli_num_rows($res1);; // if ($numOfMember > 0) {; //     $num_member = $numOfMember - 1;; // } else {; //     $num_member = 0;; // }
+}; // $sql1        = "SELECT * FROM member";; // $res1        = mysqli_query($connect, $sql1);; // $numOfMember = mysqli_num_rows($res1);; // if ($numOfMember > 0) {; //     $num_member = $numOfMember - 1;; // } else {; //     $num_member = 0;; // }
 
 ?>
 
@@ -28,10 +27,10 @@ if ($numOfPay > 0) {
 
     <div id="wrapper">
 
-<?php
+        <?php
 
-include_once 'include/navigation.php';
-?>
+        include_once 'include/navigation.php';
+        ?>
 
         <div id="page-wrapper">
             <div class="row">
@@ -102,7 +101,7 @@ include_once 'include/navigation.php';
                                 </div>
                             </div>
                         </div>
-                        <a href="upload-map.php" target="_blank">
+                        <a href="upload-map.php">
                             <div class="panel-footer">
                                 <span class="pull-left">바로가기</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -113,17 +112,17 @@ include_once 'include/navigation.php';
                 </div>
             </div>
 
-            </div>
         </div>
-        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#page-wrapper -->
 
     </div>
     <!-- /#wrapper -->
 
-<?php
+    <?php
 
-include_once 'include/footer.php';
-?>
+    include_once 'include/footer.php';
+    ?>
 
 </body>
 

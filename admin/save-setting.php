@@ -1,4 +1,27 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['s_id'])) {
+    echo <<<HEREDOC
+        <script>
+            $.bootstrapGrowl("로그인이 필요합니다.",
+            {
+                type: "danger",
+                ele: "body",
+                offset: {
+                from: "top",
+                amount: 20
+            },
+            align: "center",
+            width: 250,
+            delay: 4000,
+            allow_dismiss: true,
+            stackup_spacing: 10
+            });
+        </script>
+HEREDOC;
+    exit;
+}
 
 include_once '../util/config.php';
 include_once '../util/functions.php';
