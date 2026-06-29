@@ -78,9 +78,14 @@ include_once 'include/header.php';
 
                 echo <<<HEREDOC
                 <div class="col-lg-12 margin_top_30">
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <thead>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fas fa-list-ul"></i> 청구 내역 목록
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
                                 <tr>
                                     <th class="text-center">#</th>
                                     <th class="text-center">소속기관(구매자)명</th>
@@ -146,7 +151,9 @@ HEREDOC;
 
                 echo <<<HEREDOC
                             </tbody>
-                        </table>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
 HEREDOC;
@@ -169,6 +176,128 @@ HEREDOC;
                     <!-- <button type="submit" class="btn btn-info export-btn"><i class="fa fa-file-excel-o" aria-hidden="true"></i> 엑셀로 저장</button> -->
                     <a href="export-csv.php" class="btn btn-info"><i class="fa fa-file-excel-o" aria-hidden="true"></i> CSV로 저장</a>
                 </div>
+
+                <?php
+                // 연도별 데이터 추출
+                $chart_sql = "SELECT LEFT(sdate, 4) AS year, SUM(amount) AS total_amount, COUNT(*) AS total_count FROM billing GROUP BY LEFT(sdate, 4) ORDER BY year ASC";
+                $chart_res = mysqli_query($connect, $chart_sql);
+                
+                $chart_years = [];
+                $chart_amounts = [];
+                $chart_counts = [];
+                
+                if ($chart_res && mysqli_num_rows($chart_res) > 0) {
+                    while ($chart_row = mysqli_fetch_array($chart_res)) {
+                        $year = $chart_row['year'];
+                        if (empty($year)) continue; // 빈 데이터 건너뛰기
+                        $chart_years[] = $year . "년";
+                        $chart_amounts[] = $chart_row['total_amount'];
+                        $chart_counts[] = $chart_row['total_count'];
+                    }
+                }
+                ?>
+
+                <div class="col-lg-12 margin_top_30" style="margin-bottom: 50px;">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fas fa-chart-bar"></i> 연도별 청구 내역 및 결제 건수
+                        </div>
+                        <div class="panel-body">
+                            <canvas id="yearlyChart" style="width: 100%; height: 400px;"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var ctx = document.getElementById('yearlyChart').getContext('2d');
+                        var years = <?php echo json_encode($chart_years); ?>;
+                        var amounts = <?php echo json_encode($chart_amounts); ?>;
+                        var counts = <?php echo json_encode($chart_counts); ?>;
+
+                        var myChart = new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: years,
+                                datasets: [{
+                                    label: '총 청구 금액(원)',
+                                    data: amounts,
+                                    backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                                    borderColor: 'rgba(54, 162, 235, 1)',
+                                    borderWidth: 1,
+                                    yAxisID: 'y'
+                                }, {
+                                    label: '결제 건수(건)',
+                                    data: counts,
+                                    type: 'line',
+                                    fill: false,
+                                    borderColor: 'rgba(255, 99, 132, 1)',
+                                    backgroundColor: 'rgba(255, 99, 132, 1)',
+                                    tension: 0.1,
+                                    yAxisID: 'y1'
+                                }]
+                            },
+                            options: {
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                interaction: {
+                                    mode: 'index',
+                                    intersect: false,
+                                },
+                                scales: {
+                                    y: {
+                                        type: 'linear',
+                                        display: true,
+                                        position: 'left',
+                                        title: {
+                                            display: true,
+                                            text: '청구 금액(원)'
+                                        },
+                                        ticks: {
+                                            callback: function(value) {
+                                                return value.toLocaleString();
+                                            }
+                                        }
+                                    },
+                                    y1: {
+                                        type: 'linear',
+                                        display: true,
+                                        position: 'right',
+                                        title: {
+                                            display: true,
+                                            text: '결제 건수(건)'
+                                        },
+                                        grid: {
+                                            drawOnChartArea: false,
+                                        },
+                                        ticks: {
+                                            stepSize: 1
+                                        }
+                                    }
+                                },
+                                plugins: {
+                                    tooltip: {
+                                        callbacks: {
+                                            label: function(context) {
+                                                let label = context.dataset.label || '';
+                                                if (label) {
+                                                    label += ': ';
+                                                }
+                                                if (context.datasetIndex === 0) { // 금액
+                                                    label += Number(context.raw).toLocaleString() + ' 원';
+                                                } else { // 건수
+                                                    label += context.raw + ' 건';
+                                                }
+                                                return label;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        });
+                    });
+                </script>
 
             </div>
 

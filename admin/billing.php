@@ -34,38 +34,46 @@ $total = mysqli_num_rows($res);
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-12">
-
-                    <form name="frm">
-                        <div class="form-group row">
-                            <div class="col-lg-4"><input class="form-control" type="text" id="company_name" name="company_name" value="" placeholder="기관명"></div>
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2" style="margin-top: 30px;">
+                    <div class="panel panel-default">
+                        <div class="panel-body" style="padding: 30px;">
+                            <form name="frm">
+                                <div class="form-group row">
+                                    <div class="col-lg-12"><input class="form-control" type="text" id="company_name" name="company_name" value="" placeholder="기관명"></div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-12"><input class="form-control" type="date" id="sdate" name="sdate" value=""></div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-12"><input class="form-control" type="text" id="buyer_name" name="buyer_name" value="" placeholder="담당자명"></div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-12 form-inline text-center">
+                                        <input class="form-control" type="text" id="buyer_tel_1" name="buyer_tel_1" value="" placeholder="010" style="width: 30%; text-align: center;"> -
+                                        <input class="form-control" type="text" id="buyer_tel_2" name="buyer_tel_2" value="" placeholder="0000" style="width: 30%; text-align: center;"> -
+                                        <input class="form-control" type="text" id="buyer_tel_3" name="buyer_tel_3" value="" placeholder="0000" style="width: 30%; text-align: center;">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-12 form-inline">
+                                        <input class="form-control text-right" type="text" id="weight" name="weight" value="" placeholder="수거량" style="width: 80%;"> kg
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-12 form-inline">
+                                        <input class="form-control text-right" type="text" id="amount" name="amount" value="" placeholder="파쇄비" style="width: 70%;"> (부가세 포함)
+                                    </div>
+                                </div>
+                                <div class="form-group row" style="margin-top: 30px;">
+                                    <div class="col-lg-12 text-center">
+                                        <input class="btn btn-success btn-lg" type="button" id="billing-btn" name="billing-btn" value="청구하기" style="width: 100%;">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="result_msg"></div>
                         </div>
-                        <div class="form-group row">
-                            <div class="col-lg-4 form-inline"><input class="form-control" type="date" id="sdate" name="sdate" value=""></div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-lg-4"><input class="form-control" type="text" id="buyer_name" name="buyer_name" value="" placeholder="담당자명"></div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-lg-12 form-inline">
-                                <input class="form-control" type="text" id="buyer_tel_1" name="buyer_tel_1" value="" placeholder="010">
-                                <input class="form-control" type="text" id="buyer_tel_2" name="buyer_tel_2" value="" placeholder="0000">
-                                <input class="form-control" type="text" id="buyer_tel_3" name="buyer_tel_3" value="" placeholder="0000">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-lg-4 form-inline"><input class="form-control text-right" type="text" id="weight" name="weight" value="" placeholder="수거량"> kg</div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-lg-4 form-inline"><input class="form-control text-right" type="text" id="amount" name="amount" value="" placeholder="파쇄비"> (부가세 포함)</div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-lg-4 form-inline"><input class="form-control btn-success" type="button" id="billing-btn" name="billing-btn" value="청구하기"></div>
-                        </div>
-                    </form>
-                    <div class="result_msg"></div>
-
-              </div>
+                    </div>
+                </div>
 
 			</div>
 

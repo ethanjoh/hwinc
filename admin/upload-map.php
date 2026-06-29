@@ -25,8 +25,7 @@ include_once 'include/header.php';
         cursor: pointer;
         transition: background-color 0.2s ease, border-color 0.2s ease;
         position: relative;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 20px auto;
     }
     .drop-zone:hover, .drop-zone.drag-over {
         background-color: #eaecf4;
@@ -74,22 +73,29 @@ $total = mysqli_num_rows($res);
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header"><i class="fas fa-upload"></i> 지도 데이터 업로드</h1>
-                    <p>엑셀파일에 지명, 주소 순으로 데이터를 입력하고 CSV파일로 변환하여 업로드하세요</p>
-                    
-                    <form enctype="multipart/form-data" action="draw-map.php" method="post" id="upload-form">
-                        <div id="drop-zone" class="drop-zone">
-                            <i class="fas fa-cloud-upload-alt fa-3x text-primary"></i>
-                            <div class="drop-zone-text">CSV 파일을 이곳에 드래그하거나 클릭하여 선택하세요</div>
-                            <div class="drop-zone-subtext">지명, 주소 순으로 정리된 CSV 형식만 지원합니다.</div>
-                            <input type="file" name="myfile" id="myfile" class="drop-zone-input" accept=".csv" required>
-                        </div>
-                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2" style="margin-top: 30px;">
+                    <div class="panel panel-default">
+                        <div class="panel-body" style="padding: 40px 30px; text-align: center;">
+                            <p style="margin-bottom: 20px;">엑셀파일에 <strong>지명, 주소</strong> 순으로 데이터를 입력하고<br>CSV파일로 변환하여 업로드하세요</p>
+                            
+                            <form enctype="multipart/form-data" action="draw-map.php" method="post" id="upload-form">
+                                <div id="drop-zone" class="drop-zone">
+                                    <i class="fas fa-cloud-upload-alt fa-3x text-primary"></i>
+                                    <div class="drop-zone-text">CSV 파일을 이곳에 드래그하거나 클릭하여 선택하세요</div>
+                                    <div class="drop-zone-subtext">지명, 주소 순으로 정리된 CSV 형식만 지원합니다.</div>
+                                    <input type="file" name="myfile" id="myfile" class="drop-zone-input" accept=".csv" required>
+                                </div>
+                            </form>
 
-                    <div class="sample-download-area">
-                        <a href="sample-seoul.csv" class="btn btn-info" download><i class="fas fa-download"></i> 서울 유명 지역 10곳 예제 CSV 다운로드</a>
+                            <div class="sample-download-area" style="margin-top: 30px;">
+                                <a href="sample-seoul.csv" class="btn btn-info" download><i class="fas fa-download"></i> 서울 유명 지역 10곳 예제 CSV 다운로드</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
 
