@@ -49,13 +49,14 @@ move_uploaded_file($_FILES['myfile']['tmp_name'], "$uploads_dir/$name");
     .map-container-layout {
         display: flex;
         flex-direction: row;
-        height: 650px;
+        height: calc(100vh - 160px);
+        min-height: 550px;
         background-color: #fff;
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         overflow: hidden;
         margin-top: 20px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         border: 1px solid #e3e6f0;
     }
     .place-list-panel {
@@ -277,7 +278,7 @@ move_uploaded_file($_FILES['myfile']['tmp_name'], "$uploads_dir/$name");
 include_once 'include/navigation.php';
 ?>
 
-        <div id="page-wrapper" style="padding-bottom: 40px; min-height: calc(100vh - 50px); background-color: #f8f9fc;">
+        <div id="page-wrapper" style="padding-bottom: 20px; min-height: calc(100vh - 50px); background-color: #f8f9fc;">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="header-btn-area" style="display: flex; gap: 8px;">
