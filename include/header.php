@@ -79,12 +79,10 @@ if (!isset($_SERVER["HTTPS"])) {
 	<!-- Head Libs -->
 	<script src="vendor/modernizr/modernizr.min.js"></script>
 
-	<!--S:SDCOMM log Analytics 스크립트-->
-	<script type="text/javascript">
-		var code = "l_2699s_00000da7"
-	</script>
-	<script type="text/javascript" src="//sdcomm.co.kr/ip_trace/bot.js"></script>
-	<!--F:SDCOMM log Analytics 스크립트-->
+	<!-- SDCOMM log Analytics 스크립트 제거 (서비스 종료로 ERR_CONNECTION_REFUSED 발생) -->
+
+	<!-- 슬라이더 포스터 이미지 선읽기 (동영상 로딩 전 빈 화면 방지) -->
+	<link rel="preload" as="image" href="img/home/home_movie5_poster.jpg">
 
 </head>
 

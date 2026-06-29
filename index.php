@@ -13,7 +13,7 @@
 						data-videoheight="100%"
 						data-videomp4="img/home/home_movie5.mp4"
 						data-videowebm="img/home/home_movie5.webm"
-						data-videopreload="auto"
+						data-videopreload="metadata"
 						data-autoplay="true"
 						data-autoplayonlyfirsttime="false"
 						data-nextslideatend="false"

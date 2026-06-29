@@ -1,8 +1,21 @@
 /* Add here all your CSS customizations */
 
-/* 동영상 로딩 전 검은 화면 방지 */
+/* 동영상 로딩 전 포스터 이미지로 즉시 배경 채우기 */
 .slider-container.rev_slider_wrapper {
-    background: #1a1a2e;
+    background-image: url('../img/home/home_movie5_poster.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #1a1a2e; /* 이미지 로드 실패 시 fallback */
+}
+
+/* Revolution Slider 로딩 스피너 최소화 (포스터 배경 위에서 투명 처리) */
+.tp-loader {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+.tp-loader .tp-loader-inner {
+    opacity: 0.5;
 }
 /* pc 화면 */
 @media (min-width: 768px) {

@@ -13,7 +13,21 @@
   - **슬라이더 배경색 안전장치**: 포스터 이미지조차 로드되지 않은 극단적 상황을 대비하여 슬라이더 컨테이너에 어두운 배경색(`#1a1a2e`)을 `custom.css`에 추가했습니다.
   - **체감 로딩 순서**: 배경색(`#1a1a2e`) → poster 이미지 → 동영상 자동 전환
 
+- **메인 페이지 동영상 로딩 지연 추가 개선 (`index.php` / `css/custom.css` / `include/header.php`)**
+  - **문제 현상**: Revolution Slider 초기화 시 `data-videopreload="auto"` 설정으로 인해 동영상 전체가 버퍼링될 때까지 로딩 스피너(`.tp-loader`)가 표시되어 사용자 체감 속도가 느린 문제를 수정했습니다.
+  - **videopreload 전략 변경** (`index.php`): `data-videopreload="auto"` → `"metadata"` 로 변경하여 동영상 전체를 미리 내려받지 않고 메타데이터만 로드한 뒤 즉시 재생을 시작하도록 개선했습니다.
+  - **포스터 이미지 preload 추가** (`include/header.php`): `<link rel="preload" as="image">` 태그를 `<head>` 내에 삽입하여 브라우저가 HTML 파싱 초기부터 포스터 이미지를 최우선 요청하도록 했습니다.
+  - **CSS 배경 즉시 표시** (`css/custom.css`): `.rev_slider_wrapper`에 포스터 이미지를 CSS 배경으로 직접 설정하고, `.tp-loader`를 투명 처리하여 JS 초기화 전에도 빈 화면 없이 포스터가 즉시 표시되도록 했습니다.
+
 ---
+
+### 버그 수정 (Fix)
+- **브라우저 콘솔 에러 2건 해결 (`include/header.php` / `include/script.php`)**
+  - **에러 1 — `sdcomm.co.kr` 접속 불가** (`ERR_CONNECTION_REFUSED`): `<head>` 내에 삽입되어 있던 SDCOMM 로그 분석 스크립트(`//sdcomm.co.kr/ip_trace/bot.js`)가 서버 종료로 연결 자체가 거부되어 렌더링 블로킹을 유발하던 문제를 수정했습니다. 해당 스크립트 블록을 `include/header.php`에서 제거했습니다.
+  - **에러 2 — 네이버 광고 추적 모듈 차단** (`ERR_BLOCKED_BY_CLIENT`): 네이버 웹 로그 분석 스크립트(`wcslog.js`)가 내부적으로 로드하는 광고 추적 모듈을 사용자 광고차단기가 차단하면서 콘솔 에러로 노출되던 문제를 수정했습니다. `include/script.php`의 wcs 호출 코드를 `try-catch`로 감싸 에러 전파를 방지했습니다. (광고차단기 미사용 일반 방문자에게는 기존과 동일하게 동작합니다.)
+
+---
+
 
 ### 버전 관리 및 보안 강화 (Chore & Security)
 - **FTP 접속 정보 파일(`sftp.json`) Git 히스토리 완전 제거**
