@@ -59,7 +59,7 @@ move_uploaded_file($_FILES['myfile']['tmp_name'], "$uploads_dir/$name");
         border: 1px solid #e3e6f0;
     }
     .place-list-panel {
-        width: 320px;
+        width: 300px;
         height: 100%;
         background-color: #f8f9fc;
         border-right: 1px solid #e3e6f0;
@@ -125,14 +125,7 @@ move_uploaded_file($_FILES['myfile']['tmp_name'], "$uploads_dir/$name");
         width: 100% !important;
         height: 100% !important;
     }
-    .roadview-canvas-area {
-        flex: 1;
-        height: 100%;
-        border-left: 1px solid #e3e6f0;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-    }
+
     #roadview {
         width: 100% !important;
         height: 100% !important;
@@ -155,11 +148,7 @@ move_uploaded_file($_FILES['myfile']['tmp_name'], "$uploads_dir/$name");
         width: 100%;
         position: relative;
     }
-    .roadview-body-area {
-        flex: 1;
-        width: 100%;
-        position: relative;
-    }
+
     
     /* 로딩 스피너 */
     .map-loading-overlay {
@@ -215,12 +204,7 @@ move_uploaded_file($_FILES['myfile']['tmp_name'], "$uploads_dir/$name");
             border-bottom: 1px solid #e3e6f0;
         }
         .map-canvas-area {
-            height: 350px;
-        }
-        .roadview-canvas-area {
-            height: 350px;
-            border-left: none;
-            border-top: 1px solid #e3e6f0;
+            height: 500px;
         }
     }
 
@@ -230,7 +214,7 @@ move_uploaded_file($_FILES['myfile']['tmp_name'], "$uploads_dir/$name");
         .header-btn-area,
         .place-list-panel,
         .panel-section-header,
-        .roadview-canvas-area {
+        #roadviewModal {
             display: none !important;
         }
         #wrapper,
@@ -341,13 +325,28 @@ include_once 'include/navigation.php';
                     </div>
                 </div>
 
-                <!-- 3단: 로드뷰 영역 -->
-                <div class="roadview-canvas-area">
-                    <div class="panel-section-header">
-                        <i class="fas fa-street-view text-primary"></i> 스트리트뷰 (로드뷰)
-                    </div>
-                    <div class="roadview-body-area">
-                        <div id="roadview"></div>
+            </div>
+
+            <!-- 로드뷰 모달 팝업 -->
+            <div class="modal fade" id="roadviewModal" tabindex="-1" role="dialog" aria-labelledby="roadviewModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content" style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: none;">
+                        <div class="modal-header" style="background-color: #4e73df; color: #fff; border-bottom: none; padding: 15px 20px;">
+                            <h5 class="modal-title" id="roadviewModalLabel" style="font-weight: bold; font-size: 16px;">
+                                <i class="fas fa-street-view"></i> <span id="roadview-title">로드뷰</span>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #fff; opacity: 0.8; text-shadow: none;">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" style="padding: 0; height: 500px; position: relative; background-color: #f8f9fc;">
+                            <div id="roadview" style="width: 100%; height: 100%;"></div>
+                            <!-- 로드뷰 미지원 안내 오버레이 -->
+                            <div id="roadview-error-overlay" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.95); z-index: 10; align-items: center; justify-content: center; flex-direction: column;">
+                                <i class="fas fa-exclamation-triangle fa-3x text-warning" style="margin-bottom: 15px;"></i>
+                                <div style="font-weight: bold; color: #5a5c69; font-size: 16px;">이 위치 주변에는 로드뷰가 지원되지 않습니다.</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -409,6 +408,26 @@ include_once 'include/navigation.php';
                 var roadview = new kakao.maps.Roadview(roadviewContainer);
                 var roadviewClient = new kakao.maps.RoadviewClient();
 
+                // 로드뷰 모달 오픈 함수
+                function openRoadviewModal(title, coords) {
+                    $('#roadview-title').text(title + ' - 로드뷰');
+                    $('#roadview-error-overlay').hide();
+                    $('#roadviewModal').modal('show');
+                    
+                    // 모달이 완전히 노출된 후 로드뷰 레이아웃 재조정 및 파노ID 설정
+                    $('#roadviewModal').one('shown.bs.modal', function () {
+                        roadview.relayout();
+                        roadviewClient.getNearestPanoId(coords, 50, function(panoId) {
+                            if (panoId) {
+                                $('#roadview-error-overlay').hide();
+                                roadview.setPanoId(panoId, coords);
+                            } else {
+                                $('#roadview-error-overlay').css('display', 'flex');
+                            }
+                        });
+                    });
+                }
+
                 // 마커, 인포윈도우, 데이터 관리 맵 객체
                 var markersMap = {};
                 var infoWindowsMap = {};
@@ -436,17 +455,6 @@ include_once 'include/navigation.php';
 
                     // 인포윈도우 활성화 (기존 인포윈도우를 닫지 않고 모두 표시되도록 유지)
                     infoWindowsMap[id].open(map, markersMap[id]);
-
-                    // 로드뷰 로딩
-                    roadviewClient.getNearestPanoId(coords, 50, function(panoId) {
-                        if (panoId) {
-                            $('#roadview').parent().show();
-                            roadview.setPanoId(panoId, coords);
-                        } else {
-                            // 인근 로드뷰 좌표가 없는 경우 안내
-                            console.log('이 위치 근처에는 로드뷰가 지원되지 않습니다.');
-                        }
-                    });
                 }
 
                 // 전체 데이터 바인딩용 bounds 객체
@@ -486,10 +494,11 @@ include_once 'include/navigation.php';
                             // 로딩 시점에 인포윈도우 표시
                             infowindow.open(map, marker);
 
-                            // 마커 클릭 이벤트 연동
-                            kakao.maps.event.addListener(marker, 'click', function() {
-                                focusLocation(index, address, title, coords);
-                            });
+                             // 마커 클릭 이벤트 연동
+                             kakao.maps.event.addListener(marker, 'click', function() {
+                                 focusLocation(index, address, title, coords);
+                                 openRoadviewModal(title, coords);
+                             });
 
                             bounds.extend(coords);
                             validLocations.push({ id: index, addr: address, title: title, coords: coords });
